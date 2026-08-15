@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yara Al-Haddad — UI/UX Designer & System Analyst</title>
+  <meta name="description" content="Portfolio of Yara Al-Haddad — UI/UX Designer & System Analyst. Research-led products shaped through structure, systems thinking, and visual clarity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-cream font-display text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-cream px-6 pt-4 lg:px-[70px]">
+    <div class="mx-auto max-w-page pb-4">
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 rounded-[12px] border border-outline-30 bg-nav-bg px-[25px] py-[17px] shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] lg:grid-cols-[1fr_auto_1fr]">
+        <a href="index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary">Yara Al-Haddad</a>
+
+        <nav class="col-span-2 hidden items-center justify-center gap-8 lg:col-span-1 lg:flex" aria-label="Primary">
+          <a href="index.html" class="relative px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-primary">
+            Home
+            <span class="absolute inset-x-0 -bottom-[3.59px] h-px bg-primary"></span>
+          </a>
+          <a href="work.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Work</a>
+          <a href="about.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+        </nav>
+
+        <div class="hidden items-center justify-end gap-4 lg:flex">
+          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+          <button type="button" class="text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch language">AR</button>
+        </div>
+
+        <button id="menu-toggle" type="button" class="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg border border-outline-30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 lg:hidden">
+        <nav class="flex flex-col gap-1" aria-label="Mobile">
+          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary">Home</a>
+          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Work</a>
+          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+          <a href="contact.html" class="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="bg-cream px-6 lg:px-[70px]">
+      <div class="mx-auto grid max-w-page grid-cols-1 gap-x-6 lg:grid-cols-12 lg:grid-rows-[640px]">
+        <div class="flex flex-col justify-center gap-[10px] py-12 lg:col-span-7 lg:row-start-1 lg:py-0">
+          <div class="inline-flex w-fit items-center gap-2 rounded-full border border-badge-border px-[17px] py-[5px]">
+            <span class="size-[6px] shrink-0 rounded-full bg-badge-dot"></span>
+            <span class="text-sm font-medium uppercase tracking-[0.07em] text-muted-soft">YARA AL-HADDAD — UI/UX DESIGNER &amp; SYSTEM ANALYST</span>
+          </div>
+
+          <div class="h-auto lg:h-[180px]">
+            <h1 class="max-w-[504px] text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">
+              <span class="block">I design clear digital</span>
+              <span class="block">experiences from</span>
+              <span class="block">complex systems.</span>
+            </h1>
+          </div>
+
+          <p class="max-w-[448px] text-lg leading-[28.8px] text-muted">
+            Research-led mobile and web products, shaped through structure, systems thinking, and visual clarity.
+          </p>
+
+          <div class="flex max-w-[459px] flex-wrap items-center gap-6">
+            <a href="#work" class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-4 text-sm font-medium tracking-[0.07em] text-on-primary">
+              Explore Selected Work
+              <img src="assets/images/icons/hero-arrow.svg" alt="" class="size-3 shrink-0" width="12" height="12">
+            </a>
+            <a href="contact.html" class="inline-flex flex-1 items-center justify-center rounded-lg border border-secondary px-[21px] py-[17px] text-sm font-medium tracking-[0.07em] text-secondary">Start a conversation</a>
+          </div>
+
+          <div class="max-w-[448px] border-l-2 border-primary pl-[26px]">
+            <p class="text-lg leading-[29.25px] text-ink-subtle">Designer, analyst, and software engineering.</p>
+            <div class="flex items-center gap-[13px]">
+              <img src="assets/images/icons/location.svg" alt="" class="h-[11.667px] w-[9.333px] shrink-0" width="9" height="12">
+              <span class="text-sm leading-5 text-muted">Gaza · Available for remote opportunities</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 py-[10px]">
+            <div>
+              <div class="text-[30px] leading-9 text-primary">2+</div>
+              <div class="text-xs uppercase tracking-[0.06em] text-muted">YEARS EXP</div>
+            </div>
+            <div class="px-2">
+              <div class="h-12 w-px bg-outline"></div>
+            </div>
+            <div>
+              <div class="text-[30px] leading-9 text-secondary">32</div>
+              <div class="text-xs uppercase tracking-[0.06em] text-muted">PROJECTS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-start justify-center pb-12 lg:col-span-4 lg:col-start-8 lg:row-start-1 lg:w-[409px] lg:justify-self-start lg:pb-0">
+          <div class="relative mx-auto w-full max-w-[411px] lg:mx-0">
+            <div class="relative -ml-[7px] flex h-[469px] w-[418px] max-w-[calc(100%+7px)] flex-col items-end justify-center">
+              <div class="pointer-events-none absolute inset-[16.5px_-16px_-16.5px_16px] rounded-[12px] border-2 border-hero-frame" aria-hidden="true"></div>
+              <div class="relative h-[467px] w-full overflow-hidden rounded-[12px] shadow-[0px_20px_30px_30px_rgba(0,0,0,0.1)]">
+                <img src="assets/images/profile/hero.png" alt="Yara Al-Haddad" class="absolute left-[0.01%] top-[-4.64%] h-[119.43%] w-full max-w-none object-cover" width="418" height="467">
+              </div>
+            </div>
+
+            <div class="absolute left-[25px] top-[-17px] z-10 flex h-[43.96px] w-[45.26px] -rotate-[4.96deg] items-center justify-center">
+              <img src="assets/images/icons/share-chip.svg" alt="" class="block size-full max-w-none" width="46" height="44">
+            </div>
+
+            <div class="absolute right-[-22px] top-[calc(50%-61.78px)] z-10 flex size-[45.43px] -translate-y-1/2 rotate-[12.72deg] items-center justify-center">
+              <img src="assets/images/icons/arrow-chip.svg" alt="" class="block size-[38px] max-w-none" width="38" height="38">
+            </div>
+
+            <div class="absolute bottom-[-5px] left-[13px] z-10 flex -rotate-[2.71deg] items-center">
+              <div class="flex items-center gap-2 rounded-full border border-outline-30 bg-cream p-[9px] shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+                <span class="size-3 shrink-0 rounded-full bg-secondary"></span>
+                <span class="pe-2 text-xs leading-4 text-ink">Component</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE RIBBON -->
+    <section class="border-y border-border-ribbon py-[25px]">
+      <p class="text-center text-sm font-medium uppercase tracking-[0.14em] text-rose">DESIGNING THE LOGIC BEHIND THE INTERFACE.</p>
+      <div class="mx-auto mt-5 flex max-w-page flex-wrap items-center justify-center gap-x-12 gap-y-2 px-6 text-sm font-medium tracking-[0.07em] lg:px-[70px]">
+        <span class="text-muted">Product Design</span>
+        <span class="text-outline">•</span>
+        <span class="text-muted">System Analysis</span>
+        <span class="text-outline">•</span>
+        <span class="text-muted">UX Research</span>
+        <span class="text-outline">•</span>
+        <span class="text-muted">Design Systems</span>
+        <span class="text-outline">•</span>
+        <span class="text-muted">Prototyping</span>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section id="work" class="flex flex-col items-center gap-16 bg-cream py-32">
+      <div class="flex w-full max-w-[1200px] flex-col gap-8 px-8">
+        <h2 class="text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">Selected Work</h2>
+        <div class="h-px w-full bg-outline-30"></div>
+      </div>
+
+      <!-- Sadded -->
+      <article class="w-full max-w-work overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
+        <div class="grid lg:grid-cols-12">
+          <div class="flex min-h-[371px] items-center justify-center bg-surface-image lg:col-span-7">
+            <div class="relative h-[320px] w-full max-w-[634px] overflow-hidden">
+              <img src="assets/images/projects/sadded/cover.png" alt="Sadded mobile app" class="absolute inset-0 h-[115.48%] w-full max-w-none object-cover object-top" width="634" height="320">
+            </div>
+          </div>
+          <div class="flex flex-col justify-center p-12 lg:col-span-5">
+            <div class="mb-6 flex gap-2">
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+            </div>
+            <h3 class="mb-4 text-[32px] font-medium leading-[41.6px] text-ink">Sadded</h3>
+            <p class="mb-6 text-lg italic leading-[28.8px] text-muted">"How might we make personal debt easier to understand and manage?"</p>
+            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
+              Read Case Study
+              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Grid -->
+      <div class="grid w-full max-w-work gap-6 lg:grid-cols-2">
+        <!-- AdminEdu -->
+        <article class="overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
+          <div class="h-[350px] bg-surface-image overflow-hidden">
+            <img src="assets/images/projects/adminedu/cover.png" alt="AdminEdu dashboard" class="h-full w-[107.1%] max-w-none object-cover" width="530" height="350">
+          </div>
+          <div class="border-t border-outline-10 px-8 pb-8 pt-[33px]">
+            <div class="mb-6 flex gap-2">
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+            </div>
+            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink">AdminEdu</h3>
+            <p class="mb-6 text-lg leading-[28.8px] text-muted">Responsive education dashboard supporting comprehensive light and dark themes.</p>
+            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
+              View Project
+              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            </a>
+          </div>
+        </article>
+
+        <!-- WorkNest -->
+        <article class="overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
+          <div class="flex h-[350px] items-center justify-center bg-surface-image p-8">
+            <img src="assets/images/projects/worknest/cover.png" alt="WorkNest HR system" class="h-full w-[63.26%] max-w-none object-contain" width="466" height="286">
+          </div>
+          <div class="border-t border-outline-10 px-8 pb-8 pt-[33px]">
+            <div class="mb-6 flex gap-2">
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+            </div>
+            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink">WorkNest</h3>
+            <p class="mb-6 text-lg leading-[28.8px] text-muted">Responsive HR onboarding system designed for clarity and ease of use across all devices.</p>
+            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
+              View Project
+              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <a href="work.html" class="inline-flex items-center gap-2 border-b border-ink pb-[5px] text-sm font-medium tracking-[0.07em] text-ink">
+        View all projects
+        <img src="assets/images/icons/arrow-right.svg" alt="" class="size-[9.333px]" width="9" height="9">
+      </a>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="process" class="bg-methodology py-[60px]">
+      <div class="mx-auto max-w-[1024px] px-8 text-center">
+        <h2 class="text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-methodology-text">Methodology</h2>
+        <p class="mt-4 text-base leading-6 text-methodology-muted">A structured process from research to refined experiences</p>
+      </div>
+
+      <div class="relative mx-auto mt-8 h-[450px] w-full max-w-[1184px] px-12">
+        <img src="assets/images/ui/methodology-path.svg" alt="" class="pointer-events-none absolute inset-0 size-full" width="1184" height="450">
+
+        <!-- Step 1 -->
+        <div class="absolute left-[0.28%] top-[60px] w-[18%] text-center">
+          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <img src="assets/images/icons/method-research.svg" alt="" class="size-6" width="24" height="24">
+          </div>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text">1. Research</h3>
+          <p class="mx-auto mt-3 max-w-[193px] text-xs leading-[19.5px] text-methodology-muted">Understanding users, their needs, behaviors, and pain points.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="absolute left-[20.28%] top-[280px] w-[18%] text-center">
+          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <img src="assets/images/icons/method-define.svg" alt="" class="size-6" width="24" height="24">
+          </div>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text">2. Define</h3>
+          <p class="mx-auto mt-3 max-w-[188px] text-xs leading-[19.5px] text-methodology-muted">Defining the problem, user goals, and design requirements.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="absolute left-1/2 top-[60px] w-[224px] -translate-x-1/2 text-center">
+          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <img src="assets/images/icons/method-flow.svg" alt="" class="size-6" width="24" height="24">
+          </div>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text">3. User Flow &amp; IA</h3>
+          <p class="mx-auto mt-3 max-w-[180px] text-xs leading-[19.5px] text-methodology-muted">Structuring information and mapping intuitive user journeys.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="absolute left-[60.28%] top-[280px] w-[18%] text-center">
+          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <img src="assets/images/icons/method-wireframe.svg" alt="" class="size-6" width="24" height="24">
+          </div>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text">4. Wireframe &amp; UI</h3>
+          <p class="mx-auto mt-3 max-w-[207px] text-xs leading-[19.5px] text-methodology-muted">Turning ideas into structured layouts and polished interfaces.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="absolute right-0 top-[60px] w-[18%] text-center">
+          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <img src="assets/images/icons/method-prototype.svg" alt="" class="size-6" width="24" height="24">
+          </div>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text">5. Prototype &amp; Test</h3>
+          <p class="mx-auto mt-3 max-w-[202px] text-xs leading-[19.5px] text-methodology-muted">Prototyping, testing with users, and refining the experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDEX & EXPERIENCE -->
+    <section class="border-y border-outline-20 bg-cream px-6 py-[61px] lg:px-[70px]">
+      <div class="mx-auto max-w-content">
+        <h2 class="mb-16 text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">Index &amp; Experience</h2>
+        <div class="flex flex-col">
+          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Webura</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">UI/UX Designer</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2026 — Present</span></div>
+          </div>
+          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Palestine University</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">B.Sc. Software Engineering</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2023 — 2027</span></div>
+          </div>
+          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Freelance</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">Product Design Consultant</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2024 — Present</span></div>
+          </div>
+          <div class="grid grid-cols-1 gap-2 border-y border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Gaza Sky Geeks</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">Design Mentorship</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2025</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-surface-warm px-6 py-[60px] lg:px-[70px]">
+      <div class="relative mx-auto max-w-content overflow-hidden rounded-[24px] border border-outline-30 bg-cta-surface p-12 text-center lg:p-[97px]">
+        <div class="pointer-events-none absolute -left-12 -top-12 size-48 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -bottom-24 -right-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <h2 class="relative mx-auto max-w-[946px] text-[48px] leading-[48px] text-ink">Ready to build something structured and calm?</h2>
+        <div class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
+          <a href="contact.html" class="rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">Start a Conversation</a>
+          <a href="#work" class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2">
+            View selected work
+            <img src="assets/images/icons/cta-arrow.svg" alt="" class="size-3" width="12" height="12">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Figma 72:3242 / 73:3350 -->
+  <footer class="flex flex-col items-start justify-end bg-surface-warm px-6 pt-10 lg:px-[70px]">
+    <div class="w-full max-w-content shrink-0 rounded-t-[12px] border border-b-0 border-outline-20 bg-cream px-8 pb-6 pt-[25px]">
+      <div class="flex items-center justify-between">
+        <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary">Yara Al-Haddad</span>
+        <div class="flex shrink-0 items-center gap-6">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch to Arabic">العربية</button>
+        </div>
+        <p class="shrink-0 text-sm leading-5 text-muted-soft">© 2024 Yara Al-Haddad. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

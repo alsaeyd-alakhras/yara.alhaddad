@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@source "../../*.html";
+
+@theme {
+  /* Colors — extracted from Figma Home + About */
+  --color-cream: #fef9f1;
+  --color-primary: #87504b;
+  --color-on-primary: #fff7f6;
+  --color-secondary: #56634e;
+  --color-ink: #353229;
+  --color-ink-strong: #1e1b15;
+  --color-muted: #625f54;
+  --color-muted-soft: #6f5b4a;
+  --color-outline: #b6b2a5;
+  --color-rose: #b97a74;
+  --color-cta-surface: #ede8dc;
+  --color-hero-frame: #efd5c0;
+  --color-badge-dot: #8c9a82;
+  --color-banner-text: #f7f2ea;
+  --color-surface-tag: rgba(254, 227, 205, 0.5);
+  --color-surface-image: rgba(237, 232, 220, 0.3);
+  --color-tag-text: #645241;
+  --color-methodology: #8b5751;
+  --color-methodology-text: #fff8ef;
+  --color-methodology-muted: #e8d9ce;
+  --color-ink-subtle: rgba(44, 42, 41, 0.7);
+  --color-ink-faint: rgba(44, 42, 41, 0.6);
+  --color-border-subtle: rgba(44, 42, 41, 0.15);
+  --color-border-ribbon: rgba(31, 30, 28, 0.1);
+  --color-outline-20: rgba(182, 178, 165, 0.2);
+  --color-outline-30: rgba(182, 178, 165, 0.3);
+  --color-outline-10: rgba(182, 178, 165, 0.1);
+  --color-badge-border: rgba(185, 122, 116, 0.2);
+  --color-nav-bg: rgba(254, 249, 241, 0.8);
+  --color-nav-shadow: rgba(135, 80, 75, 0.05);
+  --color-cta-link: #524342;
+  --color-cta-button-text: #fffbff;
+  --color-banner-bg: #1f1e1c;
+  --color-about-hero-bg: rgba(235, 225, 218, 0.5);
+  --color-surface-warm: #f7f2ea;
+  --color-icon-box: #f4ede2;
+  --color-body-muted: #524342;
+  --color-accent-dark: #844d48;
+  --color-meta-label: #605e5b;
+  --color-banner-muted: #9c9c9c;
+  --color-photo-border: rgba(215, 194, 191, 0.2);
+  --color-photo-accent: rgba(185, 122, 116, 0.4);
+  --color-input-placeholder: #6b7280;
+  --color-form-heading: #1f1e1c;
+  --color-link-row-border: rgba(72, 70, 68, 0.1);
+  --color-input-border: rgba(31, 30, 28, 0.2);
+  --color-form-shadow: rgba(0, 0, 0, 0.05);
+  --color-card-bg: #fefefe;
+  --color-card-featured: #faf3e7;
+  --color-card-image: #e9e2d7;
+  --color-card-tag-bg: #fff8f0;
+  --color-card-tag-border: rgba(215, 194, 191, 0.5);
+  --color-card-border: rgba(215, 194, 191, 0.3);
+  --color-work-banner-body: #605e5b;
+  --color-link-row: rgba(96, 94, 91, 0.3);
+  --color-coming-soon: rgba(82, 67, 66, 0.6);
+  --color-case-cover: #f1e9e2;
+  --color-case-heading: #8d5c58;
+  --color-case-body: #57534e;
+  --color-case-tag-border: rgba(132, 115, 113, 0.15);
+  --color-section-border: #e7e5e4;
+
+  /* Fonts — EN: Playfair Display | AR: Inter (see design.md) */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-ar: "Inter", system-ui, sans-serif;
+
+  /* Layout */
+  --max-width-page: 1280px;
+  --max-width-content: 1140px;
+  --max-width-work: 1088px;
+}

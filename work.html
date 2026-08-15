@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Yara Al-Haddad</title>
+  <meta name="description" content="Selected projects by Yara Al-Haddad — mobile products, responsive platforms, dashboards, and focused UI explorations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-cream font-display text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-cream px-6 pt-4 lg:px-[70px]">
+    <div class="mx-auto max-w-page pb-4">
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 rounded-[12px] border border-outline-30 bg-nav-bg px-[25px] py-[17px] shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] lg:grid-cols-[1fr_auto_1fr]">
+        <a href="index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary">Yara Al-Haddad</a>
+
+        <nav class="col-span-2 hidden items-center justify-center gap-8 lg:col-span-1 lg:flex" aria-label="Primary">
+          <a href="index.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Home</a>
+          <a href="work.html" class="relative px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-primary" aria-current="page">
+            Work
+            <span class="absolute inset-x-0 -bottom-[3.59px] h-px bg-primary"></span>
+          </a>
+          <a href="about.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+        </nav>
+
+        <div class="hidden items-center justify-end gap-4 lg:flex">
+          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+          <button type="button" class="text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch language">AR</button>
+        </div>
+
+        <button id="menu-toggle" type="button" class="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg border border-outline-30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 lg:hidden">
+        <nav class="flex flex-col gap-1" aria-label="Mobile">
+          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Home</a>
+          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary">Work</a>
+          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+          <a href="contact.html" class="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="relative overflow-clip bg-banner-bg">
+    <div class="absolute inset-x-0 bottom-0 h-px bg-[rgba(247,242,234,0.1)]" aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-page p-[64px]">
+      <div class="relative flex h-[400px] w-full items-center pr-[72px]">
+
+        <div class="relative z-10 flex max-w-[758px] flex-col gap-6">
+          <div class="flex w-full flex-col items-start">
+            <p class="text-[12px] font-semibold uppercase leading-[18px] tracking-[2.4px] text-rose">work</p>
+            <div class="h-px w-[44px] bg-[rgba(185,122,116,0.3)]"></div>
+          </div>
+
+          <h1 class="text-[56px] font-semibold leading-[61.6px] tracking-[-1.12px] text-banner-text">
+            <em class="font-semibold italic text-rose">Interfaces</em> shaped by research, systems, and careful visual decisions.
+          </h1>
+
+          <p class="text-lg leading-[28.8px] tracking-[-0.18px] text-work-banner-body">
+            A selection of mobile products, responsive platforms, dashboards, and focused UI explorations.
+          </p>
+
+          <ul class="flex max-w-[419px] items-start justify-between">
+            <li class="flex items-center gap-2">
+              <span class="size-[6px] shrink-0 rounded-[12px] bg-rose"></span>
+              <span class="text-sm font-medium leading-[19.6px] text-work-banner-body">Mobile</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="size-[6px] shrink-0 rounded-[12px] bg-rose"></span>
+              <span class="text-sm font-medium leading-[19.6px] text-work-banner-body">Web</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="size-[6px] shrink-0 rounded-[12px] bg-rose"></span>
+              <span class="text-sm font-medium leading-[19.6px] text-work-banner-body">Dashboards</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="size-[6px] shrink-0 rounded-[12px] bg-rose"></span>
+              <span class="text-sm font-medium leading-[19.6px] text-work-banner-body">UX Research</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
+          <p class="absolute right-[53px] top-[calc(50%+113px)] w-[339px] -translate-y-1/2 font-display text-[128px] uppercase leading-[128px] tracking-[-20px] text-[rgba(247,242,234,0.1)]">Work</p>
+
+          <div class="absolute left-[780px] top-[-45px] flex h-[400px] min-h-[400px] items-center justify-center">
+            <div class="relative flex size-[300px] shrink-0 items-center justify-center rounded-[12px] border border-solid border-[rgba(185,122,116,0.1)] p-px">
+              <div class="relative size-[200px] shrink-0 rounded-[12px] border border-solid border-[rgba(185,122,116,0.2)]">
+                <div class="flex size-full items-center justify-center p-px">
+                  <div class="size-[100px] shrink-0 rounded-[12px] bg-[linear-gradient(135deg,rgba(185,122,116,0.1)_0%,rgba(185,122,116,0)_100%)]"></div>
+                </div>
+              </div>
+              <div class="absolute inset-[-62px_-61.44px_-61.44px_-62px] flex items-center justify-center mix-blend-overlay">
+                <div class="size-[421.44px] shrink-0 rotate-45">
+                  <div class="size-full bg-gradient-to-b from-[rgba(255,248,240,0)] from-0% via-[#fff8f0] via-1/2 to-[rgba(255,248,240,0)] to-100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- PROJECTS -->
+    <section class="px-6 pb-[60px] pt-[60px] lg:px-[70px]">
+      <div class="mx-auto max-w-content">
+
+        <!-- Featured: Sadded -->
+        <a href="project.html" class="group mb-6 block overflow-hidden rounded-[16px] border border-card-border bg-card-featured p-px shadow-[0px_12px_40px_0px_rgba(0,0,0,0.04)]">
+          <div class="grid lg:grid-cols-2">
+            <div class="flex flex-col justify-center p-8 lg:p-16">
+              <div class="mb-6 flex flex-wrap gap-2">
+                <span class="rounded-[12px] border border-card-tag-border bg-card-tag-bg px-[13px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">UX Research</span>
+                <span class="rounded-[12px] border border-card-tag-border bg-card-tag-bg px-[13px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Product Design</span>
+                <span class="rounded-[12px] border border-card-tag-border bg-card-tag-bg px-[13px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Mobile App</span>
+              </div>
+              <h2 class="mb-6 text-[32px] font-semibold leading-[41.6px] text-ink-strong">
+                <span class="block">Sadded, Debt Management</span>
+                <span class="block">Mobile App</span>
+              </h2>
+              <p class="mb-8 max-w-[448px] text-base leading-6 text-body-muted">
+                A research-led mobile experience for understanding and managing personal debt.
+              </p>
+              <span class="inline-flex items-center gap-1 text-sm font-medium leading-[19.6px] text-accent-dark">
+                View case study
+                <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+              </span>
+            </div>
+            <div class="relative min-h-[280px] bg-card-image lg:min-h-[373px]">
+              <div class="relative h-full min-h-[280px] overflow-hidden rounded-br-lg lg:min-h-[373px]">
+                <img src="assets/images/projects/sadded/featured.png" alt="Sadded debt management mobile app interface" class="absolute left-[-3.97%] top-0 h-full w-[107.93%] max-w-none object-cover" width="569" height="373">
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Grid -->
+        <div class="grid gap-6 lg:grid-cols-2">
+
+          <!-- WorkNest -->
+          <a href="project.html" class="group overflow-hidden rounded-[16px] border border-card-border bg-card-bg p-px shadow-[0px_12px_40px_0px_rgba(0,0,0,0.04)]">
+            <div class="relative h-[288px] overflow-hidden bg-card-image">
+              <img src="assets/images/projects/worknest/cover.png" alt="WorkNest HR onboarding system dashboard" class="absolute left-0 top-[-28.5%] h-[156.99%] w-full max-w-none object-cover" width="556" height="288">
+            </div>
+            <div class="p-8">
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Responsive Web</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Mobile</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">UI/UX</span>
+              </div>
+              <h3 class="text-2xl font-medium leading-[33.6px] text-ink-strong">WorkNest</h3>
+              <p class="mt-3 text-sm font-medium leading-[19.6px] text-ink-strong">HR Systems Onboarding</p>
+              <p class="mt-6 text-base leading-6 text-body-muted">
+                Responsive onboarding concepts designed to make the first steps into an HR platform feel clear and approachable.
+              </p>
+              <span class="mt-6 inline-flex items-center gap-2 border-b border-link-row pb-[5px] text-sm font-medium leading-[19.6px] text-form-heading">
+                Explore project
+                <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+              </span>
+            </div>
+          </a>
+
+          <!-- AdminEdu -->
+          <a href="project.html" class="group overflow-hidden rounded-[16px] border border-card-border bg-card-bg p-px shadow-[0px_12px_40px_0px_rgba(0,0,0,0.04)]">
+            <div class="relative h-[288px] overflow-hidden bg-card-image">
+              <img src="assets/images/projects/adminedu/cover.png" alt="AdminEdu responsive education dashboard" class="absolute left-0 top-[-28.5%] h-[156.99%] w-full max-w-none object-cover" width="556" height="288">
+            </div>
+            <div class="p-8">
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Dashboard</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Responsive UI</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Dark &amp; Light</span>
+              </div>
+              <h3 class="text-2xl font-medium leading-[33.6px] text-ink-strong">AdminEdu</h3>
+              <p class="mt-3 text-sm font-medium leading-[19.6px] text-ink-strong">Responsive Education Dashboard</p>
+              <p class="mt-6 text-base leading-6 text-body-muted">
+                A dark and light administrative dashboard organizing attendance, assignments, schedules, and student information across desktop and mobile.
+              </p>
+              <span class="mt-6 inline-flex items-center gap-2 border-b border-link-row pb-[5px] text-sm font-medium leading-[19.6px] text-form-heading">
+                Explore project
+                <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+              </span>
+            </div>
+          </a>
+
+          <!-- Sprout -->
+          <a href="project.html" class="group overflow-hidden rounded-[16px] border border-card-border bg-card-bg p-px shadow-[0px_12px_40px_0px_rgba(0,0,0,0.04)]">
+            <div class="flex h-[288px] items-center justify-center overflow-hidden bg-card-image p-8">
+              <div class="relative h-[288px] w-full max-w-[606px] overflow-hidden">
+                <img src="assets/images/projects/sprout/cover.png" alt="Sprout community garden platform" class="absolute left-0 top-[-177.29%] h-[454.57%] w-full max-w-none object-cover" width="606" height="288">
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Mobile App</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Dashboard</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Community</span>
+              </div>
+              <h3 class="text-2xl font-medium leading-[33.6px] text-ink-strong">Sprout</h3>
+              <p class="mt-3 text-sm font-medium leading-[19.6px] text-ink-strong">Community Garden Platform</p>
+              <p class="mt-6 text-base leading-6 text-body-muted">
+                Mobile and web interfaces for joining community gardens, managing roles, and supporting administrative workflows.
+              </p>
+              <span class="mt-6 inline-flex items-center gap-2 border-b border-link-row pb-[5px] text-sm font-medium leading-[19.6px] text-form-heading">
+                Explore project
+                <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+              </span>
+            </div>
+          </a>
+
+          <!-- Personal Finance -->
+          <a href="project.html" class="group overflow-hidden rounded-[16px] border border-card-tag-border bg-card-bg p-px">
+            <div class="flex h-[288px] items-center justify-center border-b border-card-border px-8">
+              <p class="text-2xl font-medium italic leading-[33.6px] text-coming-soon">Project visual coming soon</p>
+            </div>
+            <div class="p-8">
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Mobile App</span>
+                <span class="rounded-[2px] border border-card-tag-border bg-card-tag-bg px-[9px] py-[5px] text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-ink-strong">Product Design</span>
+              </div>
+              <h3 class="text-2xl font-medium leading-[33.6px] text-ink-strong">Personal Finance</h3>
+              <p class="mt-3 text-sm font-medium leading-[19.6px] text-ink-strong">Bill Splitting Assistant</p>
+              <p class="mt-6 text-base leading-6 text-body-muted">
+                A collaborative concept for organizing personal finances and splitting shared bills.
+              </p>
+              <span class="mt-6 inline-flex items-center gap-2 border-b border-link-row pb-[5px] text-sm font-medium leading-[19.6px] text-form-heading">
+                Explore project
+                <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-surface-warm px-6 py-[60px] lg:px-[70px]">
+      <div class="relative mx-auto max-w-content overflow-hidden rounded-[24px] border border-outline-30 bg-cta-surface p-12 text-center lg:p-[97px]">
+        <div class="pointer-events-none absolute -left-12 -top-12 size-48 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -bottom-24 -right-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <h2 class="relative mx-auto max-w-[946px] text-[48px] leading-[48px] text-ink">Have a product that needs clearer structure and a more human interface?</h2>
+        <div class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
+          <a href="contact.html" class="rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">Start a Conversation</a>
+          <a href="mailto:yara.ast3@gmail.com" class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2">
+            yara.ast3@gmail.com
+            <img src="assets/images/icons/cta-arrow.svg" alt="" class="size-3" width="12" height="12">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Figma 73:3350 / 73:3351 -->
+  <footer class="flex flex-col items-start justify-end bg-surface-warm px-6 pt-10 lg:px-[70px]">
+    <div class="w-full max-w-content shrink-0 rounded-t-[12px] border border-b-0 border-outline-20 bg-cream px-8 pb-6 pt-[25px]">
+      <div class="flex items-center justify-between">
+        <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary">Yara Al-Haddad</span>
+        <div class="flex shrink-0 items-center gap-6">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch to Arabic">العربية</button>
+        </div>
+        <p class="shrink-0 text-sm leading-5 text-muted-soft">© 2024 Yara Al-Haddad. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

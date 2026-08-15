@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+
+# Built CSS — regenerate with `npm run build:css`
+assets/css/main.css
+assets/css/main.css.map

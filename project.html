@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sadded — Case Study | Yara Al-Haddad</title>
+  <meta name="description" content="Sadded debt management mobile app — a research-led UX case study by Yara Al-Haddad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-cream font-display text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-cream px-6 pt-4 lg:px-[70px]">
+    <div class="mx-auto max-w-page pb-4">
+      <div class="grid grid-cols-[1fr_auto] items-center gap-4 rounded-[12px] border border-outline-30 bg-nav-bg px-[25px] py-[17px] shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] lg:grid-cols-[1fr_auto_1fr]">
+        <a href="index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary">Yara Al-Haddad</a>
+
+        <nav class="col-span-2 hidden items-center justify-center gap-8 lg:col-span-1 lg:flex" aria-label="Primary">
+          <a href="index.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Home</a>
+          <a href="work.html" class="relative px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-primary" aria-current="page">
+            Work
+            <span class="absolute inset-x-0 -bottom-[3.59px] h-px bg-primary"></span>
+          </a>
+          <a href="about.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+        </nav>
+
+        <div class="hidden items-center justify-end gap-4 lg:flex">
+          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+          <button type="button" class="text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch language">AR</button>
+        </div>
+
+        <button id="menu-toggle" type="button" class="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg border border-outline-30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 lg:hidden">
+        <nav class="flex flex-col gap-1" aria-label="Mobile">
+          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Home</a>
+          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary">Work</a>
+          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">About</a>
+          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+          <a href="contact.html" class="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HEADER -->
+    <section class="px-6 py-[60px] lg:px-[70px]">
+      <div class="mx-auto max-w-content">
+        <a href="work.html" class="mb-5 inline-flex items-center gap-2 text-sm font-medium leading-[19.6px] text-meta-label">
+          <img src="assets/images/icons/back-arrow.svg" alt="" class="size-[10.667px]" width="11" height="11">
+          All work
+        </a>
+
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[56px] font-semibold leading-[61.6px] tracking-[-1.12px] text-accent-dark">Sadded</h1>
+          <p class="text-[32px] font-semibold leading-[41.6px] text-meta-label">Debt Management Mobile App</p>
+          <p class="max-w-[672px] pt-[15px] text-lg leading-[28.8px] tracking-[-0.18px] text-body-muted">
+            A mobile product concept for recording debts and following payment activity.
+          </p>
+
+          <div class="flex flex-wrap gap-4 border-t border-case-tag-border pt-[25px]">
+            <span class="rounded-[12px] bg-icon-box px-4 py-2 text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-meta-label">Mobile App</span>
+            <span class="rounded-[12px] bg-icon-box px-4 py-2 text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-meta-label">UX Research</span>
+            <span class="rounded-[12px] bg-icon-box px-4 py-2 text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-meta-label">UI Design</span>
+            <span class="rounded-[12px] bg-icon-box px-4 py-2 text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-meta-label">Hackathon Project</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVER -->
+    <section class="border-y border-outline-20 bg-case-cover px-6 py-[61px] lg:px-[70px]">
+      <div class="mx-auto max-w-content overflow-hidden rounded-lg shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+        <div class="relative aspect-[21/9] w-full overflow-hidden">
+          <img src="assets/images/projects/sadded/cover-wide.png" alt="Sadded mobile app mockups" class="absolute left-0 top-[-15.17%] h-[130.34%] w-full max-w-none object-cover" width="1140" height="489">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="border-b border-section-border bg-case-cover px-6 pb-[97px] pt-24 lg:px-[70px]">
+      <div class="mx-auto flex max-w-content flex-col gap-12">
+        <h2 class="text-[36px] leading-10 text-case-heading">Project Details</h2>
+        <p class="text-lg leading-[29.25px] text-case-body">
+          Managing personal debt can be overwhelming and stressful. Users often struggle to keep track of multiple creditors, payment deadlines, and the overall progress of their repayment journey. The goal was to create a tool that simplifies this process while maintaining a sense of calm and control. We focused on a clean, minimalist interface that prioritizes clarity. By using a soft color palette and structured data visualization, we transformed complex financial information into an intuitive experience that encourages regular engagement and financial mindfulness.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECT GALLERY -->
+    <section class="relative border-b border-section-border bg-cream px-6 pb-[97px] pt-24 lg:px-[70px]">
+      <div class="mx-auto max-w-content">
+        <h2 class="text-[36px] leading-10 text-case-heading">Project Gallery</h2>
+
+        <div class="relative mt-12" data-project-gallery>
+          <button type="button" data-gallery-prev class="absolute left-2 top-[150px] z-20 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-[#e5e7eb] bg-white opacity-100 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] transition-[opacity,box-shadow,border-color,transform] duration-300 ease-out hover:border-[#d1d5db] hover:shadow-[0px_4px_12px_rgba(0,0,0,0.08)] active:scale-95 disabled:pointer-events-none disabled:cursor-default disabled:opacity-25 disabled:shadow-none lg:-left-5" aria-label="Previous gallery image">
+            <img src="assets/images/icons/gallery-prev.svg" alt="" class="pointer-events-none size-6" width="24" height="24">
+          </button>
+
+          <div class="overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" data-gallery-viewport>
+            <div class="flex gap-6" data-gallery-track>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/gallery-research.png" alt="UX Research Insights board" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="512" height="286">
+              </figure>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/gallery-flow.png" alt="User Flow and Architecture diagram" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="512" height="286">
+              </figure>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/gallery-design-system.png" alt="Sadded design system" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="512" height="286">
+              </figure>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/cover-wide.png" alt="Sadded app mockups showcase" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="1140" height="489">
+              </figure>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/featured.png" alt="Sadded mobile dashboard interface" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="569" height="373">
+              </figure>
+              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
+                <img src="assets/images/projects/sadded/cover.png" alt="Sadded mobile app cover" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="634" height="320">
+              </figure>
+            </div>
+          </div>
+
+          <button type="button" data-gallery-next class="absolute right-2 top-[150px] z-20 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-[#e5e7eb] bg-white opacity-100 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] transition-[opacity,box-shadow,border-color,transform] duration-300 ease-out hover:border-[#d1d5db] hover:shadow-[0px_4px_12px_rgba(0,0,0,0.08)] active:scale-95 disabled:pointer-events-none disabled:cursor-default disabled:opacity-25 disabled:shadow-none lg:-right-5" aria-label="Next gallery image">
+            <img src="assets/images/icons/gallery-next.svg" alt="" class="pointer-events-none size-6" width="24" height="24">
+          </button>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-6 border-t border-case-tag-border pt-[49px] sm:flex-row sm:items-center sm:justify-between">
+          <a href="https://www.figma.com/design/MugajP9xtSQE2nPqEBd01o/Yara-Alhaddad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-base leading-6 text-accent-dark">
+            View source in Figma
+            <img src="assets/images/icons/external-link.svg" alt="" class="size-[10.5px]" width="11" height="11">
+          </a>
+          <a href="project.html" class="inline-flex items-center gap-2 text-2xl font-medium leading-[33.6px] text-ink-strong">
+            Next project — WorkNest
+            <img src="assets/images/icons/next-project.svg" alt="" class="size-4" width="16" height="16">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-surface-warm px-6 py-[60px] lg:px-[70px]">
+      <div class="relative mx-auto max-w-content overflow-hidden rounded-[24px] border border-outline-30 bg-cta-surface p-12 text-center lg:p-[97px]">
+        <div class="pointer-events-none absolute -left-12 -top-12 size-48 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -bottom-24 -right-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <h2 class="relative mx-auto max-w-[946px] text-[48px] leading-[48px] text-ink">Ready to build something structured and calm?</h2>
+        <div class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
+          <a href="contact.html" class="rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">Start a Conversation</a>
+          <a href="work.html" class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2">
+            View selected work
+            <img src="assets/images/icons/cta-arrow.svg" alt="" class="size-3" width="12" height="12">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — Figma 73:3350 / 73:3351 -->
+  <footer class="flex flex-col items-start justify-end bg-surface-warm px-6 pt-10 lg:px-[70px]">
+    <div class="w-full max-w-content shrink-0 rounded-t-[12px] border border-b-0 border-outline-20 bg-cream px-8 pb-6 pt-[25px]">
+      <div class="flex items-center justify-between">
+        <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary">Yara Al-Haddad</span>
+        <div class="flex shrink-0 items-center gap-6">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch to Arabic">العربية</button>
+        </div>
+        <p class="shrink-0 text-sm leading-5 text-muted-soft">© 2024 Yara Al-Haddad. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
