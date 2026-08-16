@@ -13,3 +13,6 @@ assets/css/main.css.map
 files/
 yara-portfolio/
 skills-lock.json
+
+# Archived original raster images — regenerate from source if needed
+assets/images/_originals/
