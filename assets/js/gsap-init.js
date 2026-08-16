@@ -98,7 +98,7 @@
     var heroImage = document.querySelector('.hero-image')
     if (heroImage) gsap.set(heroImage, { scale: 0.92 })
 
-    if (page === 'home') {
+    if (page === 'home' || page === 'about') {
       gsap.set('[data-experience-row]', { opacity: 0, y: 28 })
     }
   }
@@ -719,6 +719,7 @@
         break
       case 'about':
         initAboutAnimations()
+        initExperienceRows()
         break
       case 'contact':
         initPageBannerReveal()

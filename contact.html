@@ -39,7 +39,10 @@
         </nav>
 
         <div class="hidden items-center justify-end gap-4 lg:flex">
-          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary" data-i18n="nav.cta">Start a Conversation</a>
+          <a href="contact.html" data-btn-fill class="btn-fill rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">
+            <span class="btn-fill__layer" aria-hidden="true"></span>
+            <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+          </a>
           <button type="button" class="min-w-[44px] rounded-lg border border-outline-30 px-4 py-2 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
         </div>
 
@@ -50,12 +53,15 @@
 
       <div id="mobile-menu" class="absolute inset-x-0 top-full z-50 mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] lg:hidden">
         <nav class="flex flex-col gap-1" aria-label="Mobile">
-          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.home">Home</a>
-          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
-          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.about">About</a>
-          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary" data-i18n="nav.contact">Contact</a>
+          <a href="index.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.home">Home</a>
+          <a href="work.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
+          <a href="about.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.about">About</a>
+          <a href="contact.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary" data-i18n="nav.contact">Contact</a>
           <div class="mt-2 flex items-stretch gap-2">
-            <a href="contact.html" class="flex-1 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary" data-i18n="nav.cta">Start a Conversation</a>
+            <a href="contact.html" data-btn-fill class="btn-fill flex-1 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">
+              <span class="btn-fill__layer" aria-hidden="true"></span>
+              <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+            </a>
             <button type="button" class="shrink-0 rounded-lg border border-outline-30 px-4 py-3 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
           </div>
         </nav>
@@ -125,9 +131,11 @@
                 <div class="flex flex-col gap-6">
                   <div class="flex flex-col gap-1">
                     <p class="text-[12px] font-semibold uppercase leading-[12px] tracking-[1.2px] text-meta-label" data-i18n="contact.direct.emailLabel">EMAIL</p>
-                    <a href="mailto:yara.ast3@gmail.com" class="flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
+                    <a href="mailto:yara.ast3@gmail.com" class="link-row flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
                       <span class="text-[18px] leading-[28.8px] tracking-[-0.01em] text-ink-strong">yara.ast3@gmail.com</span>
-                      <img src="assets/images/icons/contact-external.svg" alt="" class="size-3 shrink-0 rtl-flip" width="12" height="12">
+                      <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                        <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+                      </svg>
                     </a>
                   </div>
 
@@ -145,15 +153,19 @@
                 <h2 data-reveal class="text-[24px] font-medium leading-[33.6px] text-ink-strong" data-i18n="contact.socials.title">Socials</h2>
                 <ul class="flex flex-col gap-4">
                   <li>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-row flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
                       <span class="text-sm font-medium leading-[19.6px] text-ink-strong" data-i18n="contact.socials.linkedin">LinkedIn</span>
-                      <img src="assets/images/icons/contact-external.svg" alt="" class="size-3 shrink-0 rtl-flip" width="12" height="12">
+                      <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                        <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+                      </svg>
                     </a>
                   </li>
                   <li>
-                    <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
+                    <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="link-row flex items-center justify-between border-b border-link-row-border px-[10px] pb-[9px] pt-2">
                       <span class="text-sm font-medium leading-[19.6px] text-ink-strong" data-i18n="contact.socials.behance">Behance</span>
-                      <img src="assets/images/icons/contact-external.svg" alt="" class="size-3 shrink-0 rtl-flip" width="12" height="12">
+                      <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                        <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -163,7 +175,7 @@
             <div class="mt-10 border-b border-[rgba(31,30,28,0.15)] pb-[33px] lg:mt-0">
               <p class="text-[16px] leading-6 text-body-muted" data-i18n-html="contact.note">
                 <span class="text-ink">Prefer email? Write to </span>
-                <a href="mailto:yara.ast3@gmail.com" class="text-primary">yara.ast3@gmail.com</a>
+                <a href="mailto:yara.ast3@gmail.com" class="text-primary transition-colors duration-300 hover:text-accent-dark">yara.ast3@gmail.com</a>
               </p>
             </div>
           </div>
@@ -202,7 +214,10 @@
                 <textarea id="contact-message" name="message" rows="4" placeholder="Tell me a bit about your project..." class="min-h-[113px] w-full resize-none border-b border-input-border bg-transparent pt-2 text-[16px] leading-6 text-ink-strong placeholder:text-input-placeholder focus:outline-none" data-i18n-attr="placeholder:contact.form.messagePlaceholder"></textarea>
               </div>
 
-              <button data-reveal type="submit" class="w-fit rounded-[2px] bg-primary px-8 py-4 text-sm font-medium leading-[19.6px] text-white" data-i18n="contact.form.submit">Send inquiry</button>
+              <button data-reveal type="submit" data-btn-fill class="btn-fill w-fit rounded-[2px] bg-primary px-8 py-4 text-sm font-medium leading-[19.6px] text-white">
+                <span class="btn-fill__layer" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="contact.form.submit">Send inquiry</span>
+              </button>
             </form>
           </div>
 
@@ -218,9 +233,9 @@
       <div class="flex flex-col items-center gap-5 text-center lg:grid lg:w-full lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-6 lg:text-start">
         <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary lg:justify-self-start" data-i18n="footer.brandName">Yara Al-Haddad</span>
         <div class="flex flex-col items-center gap-3 lg:flex-row lg:justify-center lg:gap-6">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted" data-i18n="footer.linkedin">LinkedIn</a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted" data-i18n="footer.behance">Behance</a>
-          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle data-i18n="footer.langToggle" data-i18n-attr="aria-label:footer.langToggleAria" aria-label="Switch to Arabic">العربية</button>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.linkedin">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.behance">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-lang-toggle data-i18n="footer.langToggle" data-i18n-attr="aria-label:footer.langToggleAria" aria-label="Switch to Arabic">العربية</button>
         </div>
         <p class="shrink-0 text-sm leading-5 text-muted-soft lg:justify-self-end lg:text-end" data-i18n="footer.copyright">© 2024 Yara Al-Haddad. All rights reserved.</p>
       </div>

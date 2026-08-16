@@ -39,7 +39,10 @@
         </nav>
 
         <div class="hidden items-center justify-end gap-4 lg:flex">
-          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary" data-i18n="nav.cta">Start a Conversation</a>
+          <a href="contact.html" data-btn-fill class="btn-fill rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">
+            <span class="btn-fill__layer" aria-hidden="true"></span>
+            <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+          </a>
           <button type="button" class="min-w-[44px] rounded-lg border border-outline-30 px-4 py-2 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
         </div>
 
@@ -50,12 +53,15 @@
 
       <div id="mobile-menu" class="absolute inset-x-0 top-full z-50 mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] lg:hidden">
         <nav class="flex flex-col gap-1" aria-label="Mobile">
-          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.home">Home</a>
-          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
-          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary" data-i18n="nav.about">About</a>
-          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.contact">Contact</a>
+          <a href="index.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.home">Home</a>
+          <a href="work.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
+          <a href="about.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary" data-i18n="nav.about">About</a>
+          <a href="contact.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.contact">Contact</a>
           <div class="mt-2 flex items-stretch gap-2">
-            <a href="contact.html" class="flex-1 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary" data-i18n="nav.cta">Start a Conversation</a>
+            <a href="contact.html" data-btn-fill class="btn-fill flex-1 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">
+              <span class="btn-fill__layer" aria-hidden="true"></span>
+              <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+            </a>
             <button type="button" class="shrink-0 rounded-lg border border-outline-30 px-4 py-3 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
           </div>
         </nav>
@@ -136,9 +142,11 @@
                 <p class="about-bio text-lg leading-[28.8px] tracking-[-0.01em] text-body-muted" data-i18n="about.hero.bio">
                   Yara is a UI/UX Designer and System Analyst with over 2 years of experience, based in Gaza City and open to remote opportunities.
                 </p>
-                <a href="#perspective" class="about-link inline-flex w-fit items-center gap-2 text-sm font-medium text-accent-dark">
+                <a href="#perspective" class="about-link link-arrow inline-flex w-fit items-center gap-2 text-sm font-medium text-accent-dark transition-colors duration-300 hover:text-primary">
                   <span data-i18n="about.hero.readStory">Read my story</span>
-                  <img src="assets/images/icons/story-arrow.svg" alt="" class="size-3 shrink-0 rtl-flip" width="12" height="12">
+                  <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                    <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+                  </svg>
                 </a>
               </div>
 
@@ -263,22 +271,22 @@
           <span class="font-bold">03 - </span>Index &amp; Experience
         </h2>
         <div class="flex flex-col">
-          <div data-reveal class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
             <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="about.experience.weburaOrg">Webura</span></div>
             <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="about.experience.weburaRole">UI/UX Designer</span></div>
             <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="about.experience.weburaPeriod">2026 — Present</span></div>
           </div>
-          <div data-reveal class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
             <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="about.experience.universityOrg">Palestine University</span></div>
             <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="about.experience.universityRole">B.Sc. Software Engineering</span></div>
             <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="about.experience.universityPeriod">2023 — 2027</span></div>
           </div>
-          <div data-reveal class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
             <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="about.experience.freelanceOrg">Freelance</span></div>
             <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="about.experience.freelanceRole">Product Design Consultant</span></div>
             <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="about.experience.freelancePeriod">2024 — Present</span></div>
           </div>
-          <div data-reveal class="grid grid-cols-1 gap-2 border-y border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-y border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
             <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="about.experience.gsgOrg">Gaza Sky Geeks</span></div>
             <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="about.experience.gsgRole">Design Mentorship</span></div>
             <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="about.experience.gsgPeriod">2025</span></div>
@@ -294,10 +302,15 @@
         <div class="pointer-events-none absolute -bottom-24 -end-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
         <h2 data-reveal class="relative mx-auto max-w-[946px] text-[32px] font-semibold leading-[48px] text-ink sm:text-[48px]" data-i18n="about.cta.title">Looking for a designer who understands both the interface and the system?</h2>
         <div data-reveal class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
-          <a href="contact.html" class="rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]" data-i18n="about.cta.button">Start a Conversation</a>
-          <a href="work.html" class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2">
+          <a href="contact.html" data-btn-fill class="btn-fill rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <span class="btn-fill__layer" aria-hidden="true"></span>
+            <span class="relative z-10" data-i18n="about.cta.button">Start a Conversation</span>
+          </a>
+          <a href="work.html" class="link-arrow inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2 transition-colors duration-300 hover:text-primary hover:decoration-primary/50">
             <span data-i18n="about.cta.link">View selected work</span>
-            <img src="assets/images/icons/cta-arrow.svg" alt="" class="size-3 rtl-flip" width="12" height="12">
+            <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+              <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -311,9 +324,9 @@
       <div class="flex flex-col items-center gap-5 text-center lg:grid lg:w-full lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-6 lg:text-start">
         <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary lg:justify-self-start" data-i18n="footer.brandName">Yara Al-Haddad</span>
         <div class="flex flex-col items-center gap-3 lg:flex-row lg:justify-center lg:gap-6">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted" data-i18n="footer.linkedin">LinkedIn</a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted" data-i18n="footer.behance">Behance</a>
-          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle data-i18n="footer.langToggle" data-i18n-attr="aria-label:footer.langToggleAria" aria-label="Switch to Arabic">العربية</button>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.linkedin">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.behance">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-lang-toggle data-i18n="footer.langToggle" data-i18n-attr="aria-label:footer.langToggleAria" aria-label="Switch to Arabic">العربية</button>
         </div>
         <p class="shrink-0 text-sm leading-5 text-muted-soft lg:justify-self-end lg:text-end" data-i18n="footer.copyright">© 2024 Yara Al-Haddad. All rights reserved.</p>
       </div>

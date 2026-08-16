@@ -294,13 +294,29 @@
   }
 
   .link-arrow:hover svg,
-  .link-arrow:focus-visible svg {
+  .link-arrow:focus-visible svg,
+  .group:hover .link-arrow svg {
     transform: translateX(0.25rem);
   }
 
   [dir="rtl"] .link-arrow:hover svg,
-  [dir="rtl"] .link-arrow:focus-visible svg {
+  [dir="rtl"] .link-arrow:focus-visible svg,
+  [dir="rtl"] .group:hover .link-arrow svg {
     transform: scaleX(-1) translateX(0.25rem);
+  }
+
+  .link-arrow-back svg {
+    transition: transform 0.3s ease-out;
+  }
+
+  .link-arrow-back:hover svg,
+  .link-arrow-back:focus-visible svg {
+    transform: translateX(-0.25rem);
+  }
+
+  [dir="rtl"] .link-arrow-back:hover svg,
+  [dir="rtl"] .link-arrow-back:focus-visible svg {
+    transform: scaleX(-1) translateX(-0.25rem);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -309,12 +325,14 @@
     }
 
     .link-arrow:hover svg,
-    .link-arrow:focus-visible svg {
+    .link-arrow:focus-visible svg,
+    .group:hover .link-arrow svg {
       transform: none;
     }
 
     [dir="rtl"] .link-arrow:hover svg,
-    [dir="rtl"] .link-arrow:focus-visible svg {
+    [dir="rtl"] .link-arrow:focus-visible svg,
+    [dir="rtl"] .group:hover .link-arrow svg {
       transform: scaleX(-1);
     }
   }
@@ -347,6 +365,28 @@
     .experience-row:active {
       border-color: rgba(44, 42, 41, 0.35);
       background-color: rgba(254, 249, 241, 0.65);
+    }
+  }
+
+  .link-row {
+    transition:
+      border-color 0.35s ease,
+      background-color 0.35s ease,
+      color 0.35s ease;
+  }
+
+  .link-row:hover,
+  .link-row:focus-visible {
+    border-color: rgba(44, 42, 41, 0.35);
+    background-color: rgba(254, 249, 241, 0.65);
+    color: var(--color-primary);
+  }
+
+  @media (hover: none) {
+    .link-row:active {
+      border-color: rgba(44, 42, 41, 0.35);
+      background-color: rgba(254, 249, 241, 0.65);
+      color: var(--color-primary);
     }
   }
 
