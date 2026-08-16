@@ -123,7 +123,7 @@
   }
 
   function fetchDict(lang) {
-    return fetch("assets/data/i18n/" + lang + ".json")
+    return fetch("./assets/data/i18n/" + lang + ".json")
       .then(function (res) {
         if (!res.ok) throw new Error("Failed to load translations");
         return res.json();
