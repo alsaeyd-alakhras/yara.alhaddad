@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "home": {
+      "title": "يارا الحداد — مصممة UI/UX ومحللة أنظمة",
+      "description": "معرض أعمال يارا الحداد — مصممة UI/UX ومحللة أنظمة. منتجات رقمية مبنية على البحث، الهيكلة، التفكير المنظومي، والوضوح البصري."
+    },
+    "work": {
+      "title": "الأعمال — يارا الحداد",
+      "description": "مشاريع مختارة ليارا الحداد — منتجات جوال، منصات متجاوبة، لوحات تحكم، واستكشافات UI مركّزة."
+    },
+    "project": {
+      "title": "سداد — دراسة حالة | يارا الحداد",
+      "description": "تطبيق سداد لإدارة الديون — دراسة حالة UX مبنية على البحث من يارا الحداد."
+    },
+    "about": {
+      "title": "نبذة — يارا الحداد",
+      "description": "ممارسة التصميم المنظومي — يارا الحداد، مصممة UI/UX ومحللة أنظمة مقيمة في Gaza City."
+    },
+    "contact": {
+      "title": "تواصل — يارا الحداد",
+      "description": "تواصل مع يارا الحداد لفرص UI/UX، تعاونات المنتجات، والعمل الرقمي المدروس."
+    }
+  },
+  "nav": {
+    "brandName": "يارا الحداد",
+    "home": "الرئيسية",
+    "work": "الأعمال",
+    "about": "نبذة",
+    "contact": "تواصل",
+    "cta": "ابدأ محادثة",
+    "langToggle": "EN",
+    "langToggleAria": "التبديل إلى الإنجليزية",
+    "menuOpen": "فتح القائمة"
+  },
+  "footer": {
+    "brandName": "يارا الحداد",
+    "linkedin": "LinkedIn",
+    "behance": "Behance",
+    "langToggle": "English",
+    "langToggleAria": "التبديل إلى الإنجليزية",
+    "copyright": "© 2024 يارا الحداد. جميع الحقوق محفوظة."
+  },
+  "shared": {
+    "tagMobileApp": "تطبيق جوال",
+    "tagUxCaseStudy": "دراسة حالة UX",
+    "readCaseStudy": "اقرأ دراسة الحالة",
+    "viewProject": "عرض المشروع",
+    "exploreProject": "استكشف المشروع",
+    "viewCaseStudy": "عرض دراسة الحالة",
+    "startConversation": "ابدأ محادثة",
+    "viewSelectedWork": "عرض الأعمال المختارة",
+    "ctaCalmTitle": "هل أنت مستعد لبناء شيء منظم وهادئ؟"
+  },
+  "home": {
+    "hero": {
+      "badge": "يارا الحداد — مصممة UI/UX ومحللة أنظمة",
+      "title": "<span class=\"block\">أصمم تجارب رقمية</span><span class=\"block\">واضحة من</span><span class=\"block\">أنظمة معقدة.</span>",
+      "subtitle": "منتجات جوال وويب مبنية على البحث، تُشكَّل عبر الهيكلة، التفكير المنظومي، والوضوح البصري.",
+      "ctaWork": "استكشف الأعمال المختارة",
+      "ctaContact": "ابدأ محادثة",
+      "quote": "مصممة، محللة، ومهندسة برمجيات.",
+      "location": "غزة · متاحة لفرص العمل عن بُعد",
+      "yearsValue": "+2",
+      "yearsLabel": "سنوات خبرة",
+      "projectsValue": "32",
+      "projectsLabel": "مشروع",
+      "chip": "مكوّن",
+      "profileAlt": "يارا الحداد"
+    },
+    "expertise": {
+      "ribbon": "تصميم المنطق وراء الواجهة.",
+      "productDesign": "تصميم المنتج",
+      "systemAnalysis": "تحليل الأنظمة",
+      "uxResearch": "بحث UX",
+      "designSystems": "أنظمة التصميم",
+      "prototyping": "النماذج الأولية"
+    },
+    "work": {
+      "title": "أعمال مختارة",
+      "saddedTitle": "سداد",
+      "saddedQuote": "\"كيف نجعل الديون الشخصية أسهل للفهم والإدارة؟\"",
+      "admineduTitle": "AdminEdu",
+      "admineduDesc": "لوحة تحكم تعليمية متجاوبة تدعم ثيمات فاتحة وداكنة شاملة.",
+      "worknestTitle": "WorkNest",
+      "worknestDesc": "نظام تأهيل HR متجاوب صُمم للوضوح وسهولة الاستخدام عبر جميع الأجهزة.",
+      "viewAll": "عرض كل المشاريع"
+    },
+    "methodology": {
+      "title": "المنهجية",
+      "subtitle": "عملية منظمة من البحث إلى تجارب متقنة",
+      "step1Title": "1. البحث",
+      "step1Desc": "فهم المستخدمين واحتياجاتهم وسلوكياتهم ونقاط الألم لديهم.",
+      "step2Title": "2. التحديد",
+      "step2Desc": "تحديد المشكلة وأهداف المستخدم ومتطلبات التصميم.",
+      "step3Title": "3. تدفق المستخدم<br>والهيكلة المعلوماتية",
+      "step3Desc": "هيكلة المعلومات ورسم رحلات مستخدم بديهية.",
+      "step4Title": "4. Wireframe والواجهة",
+      "step4Desc": "تحويل الأفكار إلى تخطيطات منظمة وواجهات مصقولة.",
+      "step5Title": "5. النموذج والاختبار",
+      "step5Desc": "بناء النماذج الأولية، الاختبار مع المستخدمين، وتحسين التجربة."
+    },
+    "experience": {
+      "title": "السجل والخبرة",
+      "weburaOrg": "Webura",
+      "weburaRole": "مصممة UI/UX",
+      "weburaPeriod": "2026 — حتى الآن",
+      "universityOrg": "Palestine University",
+      "universityRole": "بكالوريوس هندسة البرمجيات",
+      "universityPeriod": "2023 — 2027",
+      "freelanceOrg": "عمل حر",
+      "freelanceRole": "استشارية تصميم المنتجات",
+      "freelancePeriod": "2024 — حتى الآن",
+      "gsgOrg": "Gaza Sky Geeks",
+      "gsgRole": "إرشاد في التصميم",
+      "gsgPeriod": "2025"
+    },
+    "cta": {
+      "title": "هل أنت مستعد لبناء شيء منظم وهادئ؟",
+      "button": "ابدأ محادثة",
+      "link": "عرض الأعمال المختارة"
+    }
+  },
+  "work": {
+    "banner": {
+      "label": "الأعمال",
+      "title": "<em class=\"font-semibold italic text-rose\">واجهات</em> تشكّلها البحث والأنظمة والقرارات البصرية المدروسة.",
+      "subtitle": "مجموعة من منتجات الجوال، المنصات المتجاوبة، لوحات التحكم، واستكشافات UI مركّزة.",
+      "mobile": "جوال",
+      "web": "ويب",
+      "dashboards": "لوحات تحكم",
+      "uxResearch": "بحث UX",
+      "watermark": "Work"
+    },
+    "projects": {
+      "tagUxResearch": "بحث UX",
+      "tagProductDesign": "تصميم المنتج",
+      "tagMobileApp": "تطبيق جوال",
+      "tagResponsiveWeb": "ويب متجاوب",
+      "tagMobile": "جوال",
+      "tagUiUx": "UI/UX",
+      "tagDashboard": "لوحة تحكم",
+      "tagResponsiveUi": "واجهة متجاوبة",
+      "tagDarkLight": "داكن وفاتح",
+      "tagCommunity": "مجتمع",
+      "saddedTitle": "<span class=\"block\">سداد، إدارة الديون</span><span class=\"block\">تطبيق جوال</span>",
+      "saddedDesc": "تجربة جوال مبنية على البحث لفهم وإدارة الديون الشخصية.",
+      "worknestTitle": "WorkNest",
+      "worknestSubtitle": "تأهيل أنظمة HR",
+      "worknestDesc": "مفاهيم تأهيل متجاوبة صُممت لجعل الخطوات الأولى في منصة HR واضحة وسهلة المنال.",
+      "admineduTitle": "AdminEdu",
+      "admineduSubtitle": "لوحة تحكم تعليمية متجاوبة",
+      "admineduDesc": "لوحة إدارية فاتحة وداكنة تنظّم الحضور والواجبات والجداول ومعلومات الطلاب عبر سطح المكتب والجوال.",
+      "sproutTitle": "Sprout",
+      "sproutSubtitle": "منصة حدائق مجتمعية",
+      "sproutDesc": "واجهات جوال وويب للانضمام إلى حدائق مجتمعية وإدارة الأدوار ودعم سير العمل الإداري.",
+      "financeTitle": "Personal Finance",
+      "financeSubtitle": "مساعد تقسيم الفواتير",
+      "financeDesc": "مفهوم تعاوني لتنظيم الشؤون المالية الشخصية وتقسيم الفواتير المشتركة.",
+      "comingSoon": "الصورة البصرية للمشروع قريباً"
+    },
+    "cta": {
+      "title": "هل لديك منتج يحتاج هيكلة أوضح وواجهة أكثر إنسانية؟",
+      "button": "ابدأ محادثة",
+      "email": "yara.ast3@gmail.com"
+    }
+  },
+  "project": {
+    "backLink": "كل الأعمال",
+    "header": {
+      "title": "سداد",
+      "subtitle": "تطبيق جوال لإدارة الديون",
+      "description": "مفهوم منتج جوال لتسجيل الديون ومتابعة نشاط السداد."
+    },
+    "tags": {
+      "mobileApp": "تطبيق جوال",
+      "uxResearch": "بحث UX",
+      "uiDesign": "تصميم UI",
+      "hackathon": "مشروع Hackathon"
+    },
+    "coverAlt": "نماذج تطبيق سداد",
+    "details": {
+      "title": "تفاصيل المشروع",
+      "body": "إدارة الديون الشخصية قد تكون مرهقة ومُجهدة. غالباً يواجه المستخدمون صعوبة في متابعة الدائنين المتعددين ومواعيد السداد والتقدم العام في رحلة السداد. كان الهدف إنشاء أداة تبسّط هذه العملية مع الحفاظ على شعور بالهدوء والسيطرة. ركّزنا على واجهة نظيفة وبسيطة تعطي الأولوية للوضوح. باستخدام لوحة ألوان ناعمة وتصور بيانات منظم، حوّلنا المعلومات المالية المعقدة إلى تجربة بديهية تشجّع على المشاركة المنتظمة والوعي المالي."
+    },
+    "gallery": {
+      "title": "معرض المشروع",
+      "prevAria": "الصورة السابقة في المعرض",
+      "nextAria": "الصورة التالية في المعرض",
+      "altResearch": "لوحة رؤى بحث UX",
+      "altFlow": "مخطط تدفق المستخدم والهيكلة",
+      "altDesignSystem": "نظام تصميم سداد",
+      "altMockups": "عرض نماذج تطبيق سداد",
+      "altDashboard": "واجهة لوحة تحكم سداد للجوال",
+      "altCover": "غلاف تطبيق سداد للجوال",
+      "figmaLink": "عرض المصدر في Figma",
+      "nextProject": "المشروع التالي — WorkNest"
+    },
+    "cta": {
+      "title": "هل أنت مستعد لبناء شيء منظم وهادئ؟",
+      "button": "ابدأ محادثة",
+      "link": "عرض الأعمال المختارة"
+    }
+  },
+  "about": {
+    "banner": {
+      "label": "نبذة",
+      "title": "<span>ممارسة </span><em class=\"font-semibold italic text-rose\">التصميم</em><span> </span><br>المنظومي",
+      "subtitle": "صناعة تجارب راقية تمزج الدقة الجمالية بأهداف العمل.",
+      "profile": "الملف",
+      "practice": "الممارسة",
+      "perspective": "المنظور",
+      "watermark": "ABOUT"
+    },
+    "hero": {
+      "badge": "مصممة UI/UX · محللة أنظمة",
+      "title": "أحوّل الأنظمة المعقدة إلى<br>تجارب رقمية تبدو<br><em class=\"font-semibold italic text-rose\">واضحة وهادئة وإنسانية.</em>",
+      "bio": "يارا مصممة UI/UX ومحللة أنظمة بخبرة تزيد عن سنتين، مقيمة في Gaza City ومفتوحة لفرص العمل عن بُعد.",
+      "readStory": "اقرأ قصتي",
+      "experienceLabel": "الخبرة",
+      "experienceValue": "+2 سنوات",
+      "locationLabel": "الموقع",
+      "locationValue": "Gaza City",
+      "availabilityLabel": "التوفر",
+      "availabilityValue": "عن بُعد / غزة",
+      "photoAlt": "يارا الحداد"
+    },
+    "perspective": {
+      "title": "01 - المنظور",
+      "quote": "\"الواجهات الجيدة تبدأ بفهم النظام وراءها.\"",
+      "para1": "خلفيتي في هندسة البرمجيات تشكّل بشكل أساسي طريقة تصميمي. لا أنظر فقط إلى الطبقة البصرية؛ بل أحلّل البنية التحتية. هذا يتيح لي إنشاء واجهات ليست جميلة فحسب، بل متينة هيكلياً وقابلة للتنفيذ بسهولة من فرق التطوير.",
+      "para2": "أؤمن أن البساطة الحقيقية في الواجهة الأمامية تتحقق بتحليل دقيق في الخلفية. بإتقان تدفقات النظام والمتطلبات مبكراً، أضمن أن مسار المستخدم يبقى واضحاً ومنطقياً وغير معطّل بالتعقيدات التقنية."
+    },
+    "capabilities": {
+      "title": "02 - ما أعمل عليه",
+      "uiuxTitle": "تصميم UI/UX",
+      "uiux1": "Wireframes",
+      "uiux2": "واجهة متجاوبة",
+      "uiux3": "نماذج عالية الدقة",
+      "uiux4": "تصميم التفاعل",
+      "systemTitle": "تحليل الأنظمة",
+      "system1": "جمع المتطلبات",
+      "system2": "تدفقات النظام",
+      "system3": "الهيكلة المعلوماتية",
+      "system4": "رسم تدفق المستخدم",
+      "designTitle": "أنظمة التصميم",
+      "design1": "Figma Variables",
+      "design2": "Auto Layout",
+      "design3": "مكتبات المكوّنات",
+      "design4": "أنماط قابلة للتوسع",
+      "researchTitle": "بحث UX",
+      "research1": "Personas",
+      "research2": "اختبار قابلية الاستخدام",
+      "research3": "رؤى نوعية",
+      "research4": "رسم رحلة المستخدم"
+    },
+    "experience": {
+      "title": "<span class=\"font-bold\">03 - </span>السجل والخبرة",
+      "weburaOrg": "Webura",
+      "weburaRole": "مصممة UI/UX",
+      "weburaPeriod": "2026 — حتى الآن",
+      "universityOrg": "Palestine University",
+      "universityRole": "بكالوريوس هندسة البرمجيات",
+      "universityPeriod": "2023 — 2027",
+      "freelanceOrg": "عمل حر",
+      "freelanceRole": "استشارية تصميم المنتجات",
+      "freelancePeriod": "2024 — حتى الآن",
+      "gsgOrg": "Gaza Sky Geeks",
+      "gsgRole": "إرشاد في التصميم",
+      "gsgPeriod": "2025"
+    },
+    "cta": {
+      "title": "تبحث عن مصممة تفهم الواجهة والنظام معاً؟",
+      "button": "ابدأ محادثة",
+      "link": "عرض الأعمال المختارة"
+    }
+  },
+  "contact": {
+    "banner": {
+      "label": "تواصل",
+      "title": "لديك مشروع في بالك؟<br><span>لنجعله </span><em class=\"font-semibold italic text-rose\">واضحاً </em><span>ومفيداً ومدروساً بجمال.</span>",
+      "subtitle": "أنا متاحة لفرص UI/UX، تعاونات المنتجات، والعمل الرقمي المدروس.",
+      "watermark": "COntact"
+    },
+    "direct": {
+      "title": "تواصل مباشر",
+      "emailLabel": "البريد الإلكتروني",
+      "basedInLabel": "مقيمة في",
+      "basedInValue": "Gaza City · جاهزة للعمل عن بُعد"
+    },
+    "socials": {
+      "title": "التواصل الاجتماعي",
+      "linkedin": "LinkedIn",
+      "behance": "Behance"
+    },
+    "note": "<span class=\"text-ink\">تفضّل البريد؟ راسلني على </span><a href=\"mailto:yara.ast3@gmail.com\" class=\"text-primary\">yara.ast3@gmail.com</a>",
+    "form": {
+      "title": "إرسال استفسار",
+      "nameLabel": "الاسم",
+      "emailLabel": "البريد الإلكتروني",
+      "projectTypeLabel": "نوع المشروع",
+      "messageLabel": "الرسالة",
+      "namePlaceholder": "الاسم الكامل",
+      "emailPlaceholder": "example@email.com",
+      "messagePlaceholder": "أخبرني قليلاً عن مشروعك...",
+      "selectPlaceholder": "اختر خياراً...",
+      "optionProduct": "تصميم المنتج",
+      "optionUx": "بحث UX",
+      "optionSystem": "تحليل الأنظمة",
+      "optionCollaboration": "تعاون",
+      "optionOther": "أخرى",
+      "submit": "إرسال الاستفسار"
+    }
+  }
+}

@@ -41,8 +41,13 @@
 - ❌ Creative interpretation or "improvements"
 - ❌ Edit `figma-profile/`
 
-### Phase 2 (later)
-- GSAP animations after all static pages are done
+### Phase 2 — Animation
+
+- **Skill:** `.claude/skills/gsap-editorial/` (NOT `gsap-motion`)
+- **File:** `assets/js/gsap-init.js`
+- **Libraries:** GSAP 3.14 + ScrollTrigger + Lenis (CDN)
+- **Motion level:** Editorial — see `motion-tokens.md` in skill references
+- GSAP animations after all static pages are done (Phase 1 complete)
 
 ---
 

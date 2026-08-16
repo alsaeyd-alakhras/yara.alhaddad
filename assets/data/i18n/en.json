@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "home": {
+      "title": "Yara Al-Haddad — UI/UX Designer & System Analyst",
+      "description": "Portfolio of Yara Al-Haddad — UI/UX Designer & System Analyst. Research-led products shaped through structure, systems thinking, and visual clarity."
+    },
+    "work": {
+      "title": "Work — Yara Al-Haddad",
+      "description": "Selected projects by Yara Al-Haddad — mobile products, responsive platforms, dashboards, and focused UI explorations."
+    },
+    "project": {
+      "title": "Sadded — Case Study | Yara Al-Haddad",
+      "description": "Sadded debt management mobile app — a research-led UX case study by Yara Al-Haddad."
+    },
+    "about": {
+      "title": "About — Yara Al-Haddad",
+      "description": "The practice of systemic design — Yara Al-Haddad, UI/UX Designer and System Analyst based in Gaza City."
+    },
+    "contact": {
+      "title": "Contact — Yara Al-Haddad",
+      "description": "Get in touch with Yara Al-Haddad for UI/UX opportunities, product collaborations, and thoughtful digital work."
+    }
+  },
+  "nav": {
+    "brandName": "Yara Al-Haddad",
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a Conversation",
+    "langToggle": "AR",
+    "langToggleAria": "Switch to Arabic",
+    "menuOpen": "Open menu"
+  },
+  "footer": {
+    "brandName": "Yara Al-Haddad",
+    "linkedin": "LinkedIn",
+    "behance": "Behance",
+    "langToggle": "العربية",
+    "langToggleAria": "Switch to Arabic",
+    "copyright": "© 2024 Yara Al-Haddad. All rights reserved."
+  },
+  "shared": {
+    "tagMobileApp": "Mobile App",
+    "tagUxCaseStudy": "UX Case Study",
+    "readCaseStudy": "Read Case Study",
+    "viewProject": "View Project",
+    "exploreProject": "Explore project",
+    "viewCaseStudy": "View case study",
+    "startConversation": "Start a Conversation",
+    "viewSelectedWork": "View selected work",
+    "ctaCalmTitle": "Ready to build something structured and calm?"
+  },
+  "home": {
+    "hero": {
+      "badge": "YARA AL-HADDAD — UI/UX DESIGNER & SYSTEM ANALYST",
+      "title": "<span class=\"block\">I design clear digital</span><span class=\"block\">experiences from</span><span class=\"block\">complex systems.</span>",
+      "subtitle": "Research-led mobile and web products, shaped through structure, systems thinking, and visual clarity.",
+      "ctaWork": "Explore Selected Work",
+      "ctaContact": "Start a conversation",
+      "quote": "Designer, analyst, and software engineering.",
+      "location": "Gaza · Available for remote opportunities",
+      "yearsValue": "2+",
+      "yearsLabel": "YEARS EXP",
+      "projectsValue": "32",
+      "projectsLabel": "PROJECTS",
+      "chip": "Component",
+      "profileAlt": "Yara Al-Haddad"
+    },
+    "expertise": {
+      "ribbon": "DESIGNING THE LOGIC BEHIND THE INTERFACE.",
+      "productDesign": "Product Design",
+      "systemAnalysis": "System Analysis",
+      "uxResearch": "UX Research",
+      "designSystems": "Design Systems",
+      "prototyping": "Prototyping"
+    },
+    "work": {
+      "title": "Selected Work",
+      "saddedTitle": "Sadded",
+      "saddedQuote": "\"How might we make personal debt easier to understand and manage?\"",
+      "admineduTitle": "AdminEdu",
+      "admineduDesc": "Responsive education dashboard supporting comprehensive light and dark themes.",
+      "worknestTitle": "WorkNest",
+      "worknestDesc": "Responsive HR onboarding system designed for clarity and ease of use across all devices.",
+      "viewAll": "View all projects"
+    },
+    "methodology": {
+      "title": "Methodology",
+      "subtitle": "A structured process from research to refined experiences",
+      "step1Title": "1. Research",
+      "step1Desc": "Understanding users, their needs, behaviors, and pain points.",
+      "step2Title": "2. Define",
+      "step2Desc": "Defining the problem, user goals, and design requirements.",
+      "step3Title": "3. User Flow & IA",
+      "step3Desc": "Structuring information and mapping intuitive user journeys.",
+      "step4Title": "4. Wireframe & UI",
+      "step4Desc": "Turning ideas into structured layouts and polished interfaces.",
+      "step5Title": "5. Prototype & Test",
+      "step5Desc": "Prototyping, testing with users, and refining the experience."
+    },
+    "experience": {
+      "title": "Index & Experience",
+      "weburaOrg": "Webura",
+      "weburaRole": "UI/UX Designer",
+      "weburaPeriod": "2026 — Present",
+      "universityOrg": "Palestine University",
+      "universityRole": "B.Sc. Software Engineering",
+      "universityPeriod": "2023 — 2027",
+      "freelanceOrg": "Freelance",
+      "freelanceRole": "Product Design Consultant",
+      "freelancePeriod": "2024 — Present",
+      "gsgOrg": "Gaza Sky Geeks",
+      "gsgRole": "Design Mentorship",
+      "gsgPeriod": "2025"
+    },
+    "cta": {
+      "title": "Ready to build something structured and calm?",
+      "button": "Start a Conversation",
+      "link": "View selected work"
+    }
+  },
+  "work": {
+    "banner": {
+      "label": "work",
+      "title": "<em class=\"font-semibold italic text-rose\">Interfaces</em> shaped by research, systems, and careful visual decisions.",
+      "subtitle": "A selection of mobile products, responsive platforms, dashboards, and focused UI explorations.",
+      "mobile": "Mobile",
+      "web": "Web",
+      "dashboards": "Dashboards",
+      "uxResearch": "UX Research",
+      "watermark": "Work"
+    },
+    "projects": {
+      "tagUxResearch": "UX Research",
+      "tagProductDesign": "Product Design",
+      "tagMobileApp": "Mobile App",
+      "tagResponsiveWeb": "Responsive Web",
+      "tagMobile": "Mobile",
+      "tagUiUx": "UI/UX",
+      "tagDashboard": "Dashboard",
+      "tagResponsiveUi": "Responsive UI",
+      "tagDarkLight": "Dark & Light",
+      "tagCommunity": "Community",
+      "saddedTitle": "<span class=\"block\">Sadded, Debt Management</span><span class=\"block\">Mobile App</span>",
+      "saddedDesc": "A research-led mobile experience for understanding and managing personal debt.",
+      "worknestTitle": "WorkNest",
+      "worknestSubtitle": "HR Systems Onboarding",
+      "worknestDesc": "Responsive onboarding concepts designed to make the first steps into an HR platform feel clear and approachable.",
+      "admineduTitle": "AdminEdu",
+      "admineduSubtitle": "Responsive Education Dashboard",
+      "admineduDesc": "A dark and light administrative dashboard organizing attendance, assignments, schedules, and student information across desktop and mobile.",
+      "sproutTitle": "Sprout",
+      "sproutSubtitle": "Community Garden Platform",
+      "sproutDesc": "Mobile and web interfaces for joining community gardens, managing roles, and supporting administrative workflows.",
+      "financeTitle": "Personal Finance",
+      "financeSubtitle": "Bill Splitting Assistant",
+      "financeDesc": "A collaborative concept for organizing personal finances and splitting shared bills.",
+      "comingSoon": "Project visual coming soon"
+    },
+    "cta": {
+      "title": "Have a product that needs clearer structure and a more human interface?",
+      "button": "Start a Conversation",
+      "email": "yara.ast3@gmail.com"
+    }
+  },
+  "project": {
+    "backLink": "All work",
+    "header": {
+      "title": "Sadded",
+      "subtitle": "Debt Management Mobile App",
+      "description": "A mobile product concept for recording debts and following payment activity."
+    },
+    "tags": {
+      "mobileApp": "Mobile App",
+      "uxResearch": "UX Research",
+      "uiDesign": "UI Design",
+      "hackathon": "Hackathon Project"
+    },
+    "coverAlt": "Sadded mobile app mockups",
+    "details": {
+      "title": "Project Details",
+      "body": "Managing personal debt can be overwhelming and stressful. Users often struggle to keep track of multiple creditors, payment deadlines, and the overall progress of their repayment journey. The goal was to create a tool that simplifies this process while maintaining a sense of calm and control. We focused on a clean, minimalist interface that prioritizes clarity. By using a soft color palette and structured data visualization, we transformed complex financial information into an intuitive experience that encourages regular engagement and financial mindfulness."
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "prevAria": "Previous gallery image",
+      "nextAria": "Next gallery image",
+      "altResearch": "UX Research Insights board",
+      "altFlow": "User Flow and Architecture diagram",
+      "altDesignSystem": "Sadded design system",
+      "altMockups": "Sadded app mockups showcase",
+      "altDashboard": "Sadded mobile dashboard interface",
+      "altCover": "Sadded mobile app cover",
+      "figmaLink": "View source in Figma",
+      "nextProject": "Next project — WorkNest"
+    },
+    "cta": {
+      "title": "Ready to build something structured and calm?",
+      "button": "Start a Conversation",
+      "link": "View selected work"
+    }
+  },
+  "about": {
+    "banner": {
+      "label": "ABOUT",
+      "title": "<span>The </span><em class=\"font-semibold italic text-rose\">Practice</em><span> of</span><br>Systemic Design",
+      "subtitle": "Crafting elevated experiences that blend aesthetic precision with business objectives.",
+      "profile": "PROFILE",
+      "practice": "PRACTICE",
+      "perspective": "PERSPECTIVE",
+      "watermark": "ABOUT"
+    },
+    "hero": {
+      "badge": "UI/UX DESIGNER · SYSTEM ANALYST",
+      "title": "I turn complex systems into<br>digital experiences that feel<br><em class=\"font-semibold italic text-rose\">clear, calm, and human.</em>",
+      "bio": "Yara is a UI/UX Designer and System Analyst with over 2 years of experience, based in Gaza City and open to remote opportunities.",
+      "readStory": "Read my story",
+      "experienceLabel": "EXPERIENCE",
+      "experienceValue": "2+ years",
+      "locationLabel": "LOCATION",
+      "locationValue": "Gaza City",
+      "availabilityLabel": "AVAILABILITY",
+      "availabilityValue": "Remote / Gaza",
+      "photoAlt": "Yara Al-Haddad"
+    },
+    "perspective": {
+      "title": "01 - PERSPECTIVE",
+      "quote": "\"Good interfaces begin with understanding the system behind them.\"",
+      "para1": "My background in software engineering fundamentally shapes how I design. I don't just look at the visual layer; I deconstruct the underlying architecture. This allows me to create interfaces that are not only aesthetically pleasing but structurally sound and highly feasible for development teams to implement.",
+      "para2": "I believe that true simplicity on the front-end is achieved by rigorous analysis on the back-end. By mastering system flows and requirements early on, I ensure that the user's path remains clear, logical, and undisturbed by technical complexities."
+    },
+    "capabilities": {
+      "title": "02 - WHAT I WORK ACROSS",
+      "uiuxTitle": "UI/UX Design",
+      "uiux1": "Wireframes",
+      "uiux2": "Responsive UI",
+      "uiux3": "High-Fidelity Prototypes",
+      "uiux4": "Interaction Design",
+      "systemTitle": "System Analysis",
+      "system1": "Requirements Gathering",
+      "system2": "System Flows",
+      "system3": "Information Architecture",
+      "system4": "User Flow Mapping",
+      "designTitle": "Design Systems",
+      "design1": "Figma Variables",
+      "design2": "Auto Layout",
+      "design3": "Component Libraries",
+      "design4": "Scalable Patterns",
+      "researchTitle": "UX Research",
+      "research1": "Personas",
+      "research2": "Usability Testing",
+      "research3": "Qualitative Insights",
+      "research4": "Journey Mapping"
+    },
+    "experience": {
+      "title": "<span class=\"font-bold\">03 - </span>Index & Experience",
+      "weburaOrg": "Webura",
+      "weburaRole": "UI/UX Designer",
+      "weburaPeriod": "2026 — Present",
+      "universityOrg": "Palestine University",
+      "universityRole": "B.Sc. Software Engineering",
+      "universityPeriod": "2023 — 2027",
+      "freelanceOrg": "Freelance",
+      "freelanceRole": "Product Design Consultant",
+      "freelancePeriod": "2024 — Present",
+      "gsgOrg": "Gaza Sky Geeks",
+      "gsgRole": "Design Mentorship",
+      "gsgPeriod": "2025"
+    },
+    "cta": {
+      "title": "Looking for a designer who understands both the interface and the system?",
+      "button": "Start a Conversation",
+      "link": "View selected work"
+    }
+  },
+  "contact": {
+    "banner": {
+      "label": "Contact",
+      "title": "Have a project in mind?<br><span>Let's </span><em class=\"font-semibold italic text-rose\">make </em><span>it clear, useful, and beautifully considered.</span>",
+      "subtitle": "I'm open to UI/UX opportunities, product collaborations, and thoughtful digital.",
+      "watermark": "COntact"
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "emailLabel": "EMAIL",
+      "basedInLabel": "BASED IN",
+      "basedInValue": "Gaza City · Remote Ready"
+    },
+    "socials": {
+      "title": "Socials",
+      "linkedin": "LinkedIn",
+      "behance": "Behance"
+    },
+    "note": "<span class=\"text-ink\">Prefer email? Write to </span><a href=\"mailto:yara.ast3@gmail.com\" class=\"text-primary\">yara.ast3@gmail.com</a>",
+    "form": {
+      "title": "Send Inquiry",
+      "nameLabel": "NAME",
+      "emailLabel": "EMAIL ADDRESS",
+      "projectTypeLabel": "PROJECT TYPE",
+      "messageLabel": "MESSAGE",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "jane@example.com",
+      "messagePlaceholder": "Tell me a bit about your project...",
+      "selectPlaceholder": "Select an option...",
+      "optionProduct": "Product Design",
+      "optionUx": "UX Research",
+      "optionSystem": "System Analysis",
+      "optionCollaboration": "Collaboration",
+      "optionOther": "Other",
+      "submit": "Send inquiry"
+    }
+  }
+}

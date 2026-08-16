@@ -1,50 +1,69 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="font-display" data-i18n-page="home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yara Al-Haddad — UI/UX Designer & System Analyst</title>
   <meta name="description" content="Portfolio of Yara Al-Haddad — UI/UX Designer & System Analyst. Research-led products shaped through structure, systems thinking, and visual clarity.">
+  <script>
+  (function(){
+    var l = localStorage.getItem('yara_lang');
+    if (l === 'ar') {
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+      document.documentElement.className = 'font-ar';
+    }
+  })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="bg-cream font-display text-ink antialiased">
+<body data-page="home" class="bg-cream text-ink antialiased">
 
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-cream px-6 pt-4 lg:px-[70px]">
-    <div class="mx-auto max-w-page pb-4">
+    <div class="relative mx-auto max-w-page pb-4">
       <div class="grid grid-cols-[1fr_auto] items-center gap-4 rounded-[12px] border border-outline-30 bg-nav-bg px-[25px] py-[17px] shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] lg:grid-cols-[1fr_auto_1fr]">
-        <a href="index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary">Yara Al-Haddad</a>
+        <a href="index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary" data-i18n="nav.brandName">Yara Al-Haddad</a>
 
         <nav class="col-span-2 hidden items-center justify-center gap-8 lg:col-span-1 lg:flex" aria-label="Primary">
           <a href="index.html" class="relative px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-primary">
-            Home
+            <span data-i18n="nav.home">Home</span>
             <span class="absolute inset-x-0 -bottom-[3.59px] h-px bg-primary"></span>
           </a>
-          <a href="work.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Work</a>
-          <a href="about.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">About</a>
-          <a href="contact.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
+          <a href="work.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
+          <a href="about.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.about">About</a>
+          <a href="contact.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.contact">Contact</a>
         </nav>
 
         <div class="hidden items-center justify-end gap-4 lg:flex">
-          <a href="contact.html" class="rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
-          <button type="button" class="text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch language">AR</button>
+          <a href="contact.html" data-btn-fill class="btn-fill rounded-lg bg-primary px-6 py-2 text-sm font-medium tracking-[0.07em] text-on-primary">
+            <span class="btn-fill__layer" aria-hidden="true"></span>
+            <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+          </a>
+          <button type="button" class="min-w-[44px] rounded-lg border border-outline-30 px-4 py-2 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
         </div>
 
-        <button id="menu-toggle" type="button" class="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg border border-outline-30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <button id="menu-toggle" type="button" class="col-start-2 flex h-9 w-9 items-center justify-center justify-self-end rounded-lg border border-outline-30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" data-i18n-attr="aria-label:nav.menuOpen" aria-label="Open menu">
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
 
-      <div id="mobile-menu" class="mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 lg:hidden">
+      <div id="mobile-menu" class="absolute inset-x-0 top-full z-50 mt-2 hidden rounded-[12px] border border-outline-30 bg-cream p-4 shadow-[0_12px_40px_rgba(0,0,0,0.08)] lg:hidden">
         <nav class="flex flex-col gap-1" aria-label="Mobile">
-          <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary">Home</a>
-          <a href="work.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Work</a>
-          <a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">About</a>
-          <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted">Contact</a>
-          <a href="contact.html" class="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">Start a Conversation</a>
+          <a href="index.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-primary" data-i18n="nav.home">Home</a>
+          <a href="work.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.work">Work</a>
+          <a href="about.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.about">About</a>
+          <a href="contact.html" class="nav-link-hover rounded-md px-3 py-2 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.contact">Contact</a>
+          <div class="mt-2 flex items-stretch gap-2">
+            <a href="contact.html" data-btn-fill class="btn-fill flex-1 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium tracking-[0.07em] text-on-primary">
+              <span class="btn-fill__layer" aria-hidden="true"></span>
+              <span class="relative z-10" data-i18n="nav.cta">Start a Conversation</span>
+            </a>
+            <button type="button" class="shrink-0 rounded-lg border border-outline-30 px-4 py-3 text-sm font-semibold tracking-[0.12em] text-muted transition-all duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25" data-lang-toggle data-i18n="nav.langToggle" data-i18n-attr="aria-label:nav.langToggleAria" aria-label="Switch to Arabic">AR</button>
+          </div>
         </nav>
       </div>
     </div>
@@ -53,78 +72,83 @@
   <main>
 
     <!-- HERO -->
-    <section class="bg-cream px-6 lg:px-[70px]">
+    <section class="bg-cream px-6 lg:px-[70px]" data-hero>
       <div class="mx-auto grid max-w-page grid-cols-1 gap-x-6 lg:grid-cols-12 lg:grid-rows-[640px]">
         <div class="flex flex-col justify-center gap-[10px] py-12 lg:col-span-7 lg:row-start-1 lg:py-0">
-          <div class="inline-flex w-fit items-center gap-2 rounded-full border border-badge-border px-[17px] py-[5px]">
+          <div data-hero-item class="hero-badge inline-flex w-fit max-w-full items-center gap-2 rounded-full border border-badge-border px-[17px] py-[5px]">
             <span class="size-[6px] shrink-0 rounded-full bg-badge-dot"></span>
-            <span class="text-sm font-medium uppercase tracking-[0.07em] text-muted-soft">YARA AL-HADDAD — UI/UX DESIGNER &amp; SYSTEM ANALYST</span>
+            <span class="text-xs font-medium uppercase tracking-[0.07em] text-muted-soft sm:text-sm" data-i18n="home.hero.badge">YARA AL-HADDAD — UI/UX DESIGNER &amp; SYSTEM ANALYST</span>
           </div>
 
           <div class="h-auto lg:h-[180px]">
-            <h1 class="max-w-[504px] text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">
+            <h1 data-hero-item class="hero-title max-w-[504px] text-[32px] font-semibold leading-[1.2] tracking-[-0.96px] text-ink sm:text-[40px] lg:text-[48px] lg:leading-[57.6px]" data-i18n-html="home.hero.title">
               <span class="block">I design clear digital</span>
               <span class="block">experiences from</span>
               <span class="block">complex systems.</span>
             </h1>
           </div>
 
-          <p class="max-w-[448px] text-lg leading-[28.8px] text-muted">
+          <p data-hero-item class="hero-description max-w-[448px] text-base leading-relaxed text-muted sm:text-lg sm:leading-[28.8px]" data-i18n="home.hero.subtitle">
             Research-led mobile and web products, shaped through structure, systems thinking, and visual clarity.
           </p>
 
-          <div class="flex max-w-[459px] flex-wrap items-center gap-6">
-            <a href="#work" class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-4 text-sm font-medium tracking-[0.07em] text-on-primary">
-              Explore Selected Work
-              <img src="assets/images/icons/hero-arrow.svg" alt="" class="size-3 shrink-0" width="12" height="12">
+          <div data-hero-item class="hero-actions flex w-full max-w-[459px] flex-col gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:gap-6">
+            <a href="#work" data-btn-fill class="btn-fill group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-4 text-sm font-medium tracking-[0.07em] text-on-primary lg:w-auto">
+              <span class="btn-fill__layer" aria-hidden="true"></span>
+              <span class="relative z-10 inline-flex items-center gap-2">
+                <span data-i18n="home.hero.ctaWork">Explore Selected Work</span>
+                <svg class="size-3 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 rtl:-scale-x-100 rtl:group-hover:-translate-x-1 rtl:motion-reduce:group-hover:translate-x-0" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                  <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+                </svg>
+              </span>
             </a>
-            <a href="contact.html" class="inline-flex flex-1 items-center justify-center rounded-lg border border-secondary px-[21px] py-[17px] text-sm font-medium tracking-[0.07em] text-secondary">Start a conversation</a>
+            <a href="contact.html" class="btn-outline inline-flex w-full items-center justify-center rounded-lg border border-secondary px-[21px] py-[17px] text-sm font-medium tracking-[0.07em] text-secondary lg:flex-1 lg:w-auto" data-i18n="home.hero.ctaContact">Start a conversation</a>
           </div>
 
-          <div class="max-w-[448px] border-l-2 border-primary pl-[26px]">
-            <p class="text-lg leading-[29.25px] text-ink-subtle">Designer, analyst, and software engineering.</p>
+          <div class="max-w-[448px] border-s-2 border-primary ps-[26px]">
+            <p class="text-lg leading-[29.25px] text-ink-subtle" data-i18n="home.hero.quote">Designer, analyst, and software engineering.</p>
             <div class="flex items-center gap-[13px]">
               <img src="assets/images/icons/location.svg" alt="" class="h-[11.667px] w-[9.333px] shrink-0" width="9" height="12">
-              <span class="text-sm leading-5 text-muted">Gaza · Available for remote opportunities</span>
+              <span class="text-sm leading-5 text-muted" data-i18n="home.hero.location">Gaza · Available for remote opportunities</span>
             </div>
           </div>
 
           <div class="flex items-center gap-4 py-[10px]">
             <div>
-              <div class="text-[30px] leading-9 text-primary">2+</div>
-              <div class="text-xs uppercase tracking-[0.06em] text-muted">YEARS EXP</div>
+              <div class="text-[30px] leading-9 text-primary" data-i18n="home.hero.yearsValue">2+</div>
+              <div class="text-xs uppercase tracking-[0.06em] text-muted" data-i18n="home.hero.yearsLabel">YEARS EXP</div>
             </div>
             <div class="px-2">
               <div class="h-12 w-px bg-outline"></div>
             </div>
             <div>
-              <div class="text-[30px] leading-9 text-secondary">32</div>
-              <div class="text-xs uppercase tracking-[0.06em] text-muted">PROJECTS</div>
+              <div class="text-[30px] leading-9 text-secondary" data-i18n="home.hero.projectsValue">32</div>
+              <div class="text-xs uppercase tracking-[0.06em] text-muted" data-i18n="home.hero.projectsLabel">PROJECTS</div>
             </div>
           </div>
         </div>
 
-        <div class="flex flex-col items-start justify-center pb-12 lg:col-span-4 lg:col-start-8 lg:row-start-1 lg:w-[409px] lg:justify-self-start lg:pb-0">
+        <div data-hero-item data-parallax class="hero-image flex flex-col items-start justify-center pb-12 lg:col-span-4 lg:col-start-8 lg:row-start-1 lg:w-[409px] lg:justify-self-start lg:pb-0">
           <div class="relative mx-auto w-full max-w-[411px] lg:mx-0">
-            <div class="relative -ml-[7px] flex h-[469px] w-[418px] max-w-[calc(100%+7px)] flex-col items-end justify-center">
-              <div class="pointer-events-none absolute inset-[16.5px_-16px_-16.5px_16px] rounded-[12px] border-2 border-hero-frame" aria-hidden="true"></div>
-              <div class="relative h-[467px] w-full overflow-hidden rounded-[12px] shadow-[0px_20px_30px_30px_rgba(0,0,0,0.1)]">
-                <img src="assets/images/profile/hero.png" alt="Yara Al-Haddad" class="absolute left-[0.01%] top-[-4.64%] h-[119.43%] w-full max-w-none object-cover" width="418" height="467">
+            <div data-ambient class="hero-image-float relative -ms-[7px] flex aspect-[418/469] h-auto w-full max-w-[418px] flex-col items-end justify-center">
+              <div class="pointer-events-none absolute inset-[16.5px_-16px_-16.5px_16px] rounded-[12px] border-2 border-hero-frame rtl:inset-[16.5px_16px_-16.5px_-16px]" aria-hidden="true"></div>
+              <div class="relative aspect-[418/467] w-full overflow-hidden rounded-[12px] shadow-[0px_20px_30px_30px_rgba(0,0,0,0.1)]">
+                <img src="assets/images/profile/hero.png" alt="Yara Al-Haddad" class="absolute start-[0.01%] top-[-4.64%] h-[119.43%] w-full max-w-none object-cover" width="418" height="467" data-i18n-attr="alt:home.hero.profileAlt">
               </div>
             </div>
 
-            <div class="absolute left-[25px] top-[-17px] z-10 flex h-[43.96px] w-[45.26px] -rotate-[4.96deg] items-center justify-center">
+            <div class="absolute start-[25px] top-[-17px] z-10 flex h-[43.96px] w-[45.26px] -rotate-[4.96deg] items-center justify-center rtl:-rotate-[4.96deg]">
               <img src="assets/images/icons/share-chip.svg" alt="" class="block size-full max-w-none" width="46" height="44">
             </div>
 
-            <div class="absolute right-[-22px] top-[calc(50%-61.78px)] z-10 flex size-[45.43px] -translate-y-1/2 rotate-[12.72deg] items-center justify-center">
-              <img src="assets/images/icons/arrow-chip.svg" alt="" class="block size-[38px] max-w-none" width="38" height="38">
+            <div class="absolute end-0 top-[calc(50%-61.78px)] z-10 flex size-[45.43px] -translate-y-1/2 rotate-[12.72deg] items-center justify-center sm:end-[-22px] rtl:-rotate-[12.72deg]">
+              <img src="assets/images/icons/arrow-chip.svg" alt="" class="block size-[38px] max-w-none rtl-flip" width="38" height="38">
             </div>
 
-            <div class="absolute bottom-[-5px] left-[13px] z-10 flex -rotate-[2.71deg] items-center">
+            <div class="absolute bottom-[-5px] start-[13px] z-10 flex -rotate-[2.71deg] items-center rtl:rotate-[2.71deg]">
               <div class="flex items-center gap-2 rounded-full border border-outline-30 bg-cream p-[9px] shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
                 <span class="size-3 shrink-0 rounded-full bg-secondary"></span>
-                <span class="pe-2 text-xs leading-4 text-ink">Component</span>
+                <span class="pe-2 text-xs leading-4 text-ink" data-i18n="home.hero.chip">Component</span>
               </div>
             </div>
           </div>
@@ -133,179 +157,270 @@
     </section>
 
     <!-- EXPERTISE RIBBON -->
-    <section class="border-y border-border-ribbon py-[25px]">
-      <p class="text-center text-sm font-medium uppercase tracking-[0.14em] text-rose">DESIGNING THE LOGIC BEHIND THE INTERFACE.</p>
-      <div class="mx-auto mt-5 flex max-w-page flex-wrap items-center justify-center gap-x-12 gap-y-2 px-6 text-sm font-medium tracking-[0.07em] lg:px-[70px]">
-        <span class="text-muted">Product Design</span>
+    <section class="border-y border-border-ribbon px-6 py-[25px] lg:px-[70px]">
+      <p class="text-center text-sm font-medium uppercase tracking-[0.14em] text-rose" data-i18n="home.expertise.ribbon">DESIGNING THE LOGIC BEHIND THE INTERFACE.</p>
+      <div class="mx-auto mt-5 flex max-w-page flex-wrap items-center justify-center gap-x-12 gap-y-2 text-sm font-medium tracking-[0.07em]">
+        <span class="text-muted" data-i18n="home.expertise.productDesign">Product Design</span>
         <span class="text-outline">•</span>
-        <span class="text-muted">System Analysis</span>
+        <span class="text-muted" data-i18n="home.expertise.systemAnalysis">System Analysis</span>
         <span class="text-outline">•</span>
-        <span class="text-muted">UX Research</span>
+        <span class="text-muted" data-i18n="home.expertise.uxResearch">UX Research</span>
         <span class="text-outline">•</span>
-        <span class="text-muted">Design Systems</span>
+        <span class="text-muted" data-i18n="home.expertise.designSystems">Design Systems</span>
         <span class="text-outline">•</span>
-        <span class="text-muted">Prototyping</span>
+        <span class="text-muted" data-i18n="home.expertise.prototyping">Prototyping</span>
       </div>
     </section>
 
     <!-- SELECTED WORK -->
-    <section id="work" class="flex flex-col items-center gap-16 bg-cream py-32">
-      <div class="flex w-full max-w-[1200px] flex-col gap-8 px-8">
-        <h2 class="text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">Selected Work</h2>
+    <section id="work" class="bg-cream px-6 py-16 lg:px-[70px] lg:py-32">
+      <div class="mx-auto flex max-w-page flex-col gap-16">
+      <div class="flex w-full flex-col gap-8">
+        <h2 data-reveal class="text-[32px] font-semibold leading-[1.2] tracking-[-0.96px] text-ink sm:text-[40px] lg:text-[48px] lg:leading-[57.6px]" data-i18n="home.work.title">Selected Work</h2>
         <div class="h-px w-full bg-outline-30"></div>
       </div>
 
       <!-- Sadded -->
-      <article class="w-full max-w-work overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
+      <article data-reveal class="group w-full overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px transition-shadow duration-500 hover:shadow-[0_12px_40px_rgba(135,80,75,0.08)]">
         <div class="grid lg:grid-cols-12">
-          <div class="flex min-h-[371px] items-center justify-center bg-surface-image lg:col-span-7">
+          <div class="flex min-h-[371px] items-center justify-center overflow-hidden bg-surface-image lg:col-span-7">
             <div class="relative h-[320px] w-full max-w-[634px] overflow-hidden">
-              <img src="assets/images/projects/sadded/cover.png" alt="Sadded mobile app" class="absolute inset-0 h-[115.48%] w-full max-w-none object-cover object-top" width="634" height="320">
+              <img src="assets/images/projects/sadded/cover.png" alt="Sadded mobile app" class="absolute inset-0 h-[115.48%] w-full max-w-none object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100" width="634" height="320">
             </div>
           </div>
-          <div class="flex flex-col justify-center p-12 lg:col-span-5">
+          <div class="flex flex-col justify-center p-6 sm:p-8 lg:col-span-5 lg:p-12">
             <div class="mb-6 flex gap-2">
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagMobileApp">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagUxCaseStudy">UX Case Study</span>
             </div>
-            <h3 class="mb-4 text-[32px] font-medium leading-[41.6px] text-ink">Sadded</h3>
-            <p class="mb-6 text-lg italic leading-[28.8px] text-muted">"How might we make personal debt easier to understand and manage?"</p>
-            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
-              Read Case Study
-              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            <h3 class="mb-4 text-[32px] font-medium leading-[41.6px] text-ink" data-i18n="home.work.saddedTitle">Sadded</h3>
+            <p class="mb-6 text-lg italic leading-[28.8px] text-muted" data-i18n="home.work.saddedQuote">"How might we make personal debt easier to understand and manage?"</p>
+            <a href="project.html" class="link-arrow inline-flex items-center gap-2 text-lg font-medium text-primary transition-colors duration-300 hover:text-accent-dark">
+              <span data-i18n="shared.readCaseStudy">Read Case Study</span>
+              <svg class="size-[9.333px] shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+              </svg>
             </a>
           </div>
         </div>
       </article>
 
       <!-- Grid -->
-      <div class="grid w-full max-w-work gap-6 lg:grid-cols-2">
+      <div class="grid w-full gap-6 lg:grid-cols-2">
         <!-- AdminEdu -->
-        <article class="overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
-          <div class="h-[350px] bg-surface-image overflow-hidden">
-            <img src="assets/images/projects/adminedu/cover.png" alt="AdminEdu dashboard" class="h-full w-[107.1%] max-w-none object-cover" width="530" height="350">
+        <article data-reveal class="group overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px transition-shadow duration-500 hover:shadow-[0_12px_40px_rgba(135,80,75,0.08)]">
+          <div class="h-[350px] overflow-hidden bg-surface-image">
+            <img src="assets/images/projects/adminedu/cover.png" alt="AdminEdu dashboard" class="h-full w-[107.1%] max-w-none object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100" width="530" height="350">
           </div>
           <div class="border-t border-outline-10 px-8 pb-8 pt-[33px]">
             <div class="mb-6 flex gap-2">
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagMobileApp">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagUxCaseStudy">UX Case Study</span>
             </div>
-            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink">AdminEdu</h3>
-            <p class="mb-6 text-lg leading-[28.8px] text-muted">Responsive education dashboard supporting comprehensive light and dark themes.</p>
-            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
-              View Project
-              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink" data-i18n="home.work.admineduTitle">AdminEdu</h3>
+            <p class="mb-6 text-lg leading-[28.8px] text-muted" data-i18n="home.work.admineduDesc">Responsive education dashboard supporting comprehensive light and dark themes.</p>
+            <a href="project.html" class="link-arrow inline-flex items-center gap-2 text-lg font-medium text-primary transition-colors duration-300 hover:text-accent-dark">
+              <span data-i18n="shared.viewProject">View Project</span>
+              <svg class="size-[9.333px] shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+              </svg>
             </a>
           </div>
         </article>
 
         <!-- WorkNest -->
-        <article class="overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px">
-          <div class="flex h-[350px] items-center justify-center bg-surface-image p-8">
-            <img src="assets/images/projects/worknest/cover.png" alt="WorkNest HR system" class="h-full w-[63.26%] max-w-none object-contain" width="466" height="286">
+        <article data-reveal class="group overflow-hidden rounded-[16px] border border-outline-20 bg-white p-px transition-shadow duration-500 hover:shadow-[0_12px_40px_rgba(135,80,75,0.08)]">
+          <div class="flex h-[350px] items-center justify-center overflow-hidden bg-surface-image p-8">
+            <img src="assets/images/projects/worknest/cover.png" alt="WorkNest HR system" class="h-full w-[63.26%] max-w-none object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100" width="466" height="286">
           </div>
           <div class="border-t border-outline-10 px-8 pb-8 pt-[33px]">
             <div class="mb-6 flex gap-2">
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">Mobile App</span>
-              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text">UX Case Study</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagMobileApp">Mobile App</span>
+              <span class="rounded-full bg-surface-tag px-3 py-1 text-xs font-medium tracking-[0.06em] text-tag-text" data-i18n="shared.tagUxCaseStudy">UX Case Study</span>
             </div>
-            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink">WorkNest</h3>
-            <p class="mb-6 text-lg leading-[28.8px] text-muted">Responsive HR onboarding system designed for clarity and ease of use across all devices.</p>
-            <a href="project.html" class="inline-flex items-center gap-2 text-lg font-medium text-primary">
-              View Project
-              <img src="assets/images/icons/arrow-link.svg" alt="" class="size-[9.333px]" width="9" height="9">
+            <h3 class="mb-2 text-[32px] font-medium leading-[41.6px] text-ink" data-i18n="home.work.worknestTitle">WorkNest</h3>
+            <p class="mb-6 text-lg leading-[28.8px] text-muted" data-i18n="home.work.worknestDesc">Responsive HR onboarding system designed for clarity and ease of use across all devices.</p>
+            <a href="project.html" class="link-arrow inline-flex items-center gap-2 text-lg font-medium text-primary transition-colors duration-300 hover:text-accent-dark">
+              <span data-i18n="shared.viewProject">View Project</span>
+              <svg class="size-[9.333px] shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+                <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+              </svg>
             </a>
           </div>
         </article>
       </div>
 
-      <a href="work.html" class="inline-flex items-center gap-2 border-b border-ink pb-[5px] text-sm font-medium tracking-[0.07em] text-ink">
-        View all projects
-        <img src="assets/images/icons/arrow-right.svg" alt="" class="size-[9.333px]" width="9" height="9">
-      </a>
+      <div class="flex w-full justify-center">
+        <a href="work.html" class="group inline-flex items-center gap-2.5 border-b border-ink pb-[5px] text-sm font-medium tracking-[0.07em] text-ink transition-colors duration-300 hover:border-primary hover:text-primary">
+          <span data-i18n="home.work.viewAll">View all projects</span>
+          <svg class="size-3 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 rtl:-scale-x-100 rtl:group-hover:-translate-x-1 rtl:motion-reduce:group-hover:translate-x-0" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+            <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+      </div>
     </section>
 
     <!-- METHODOLOGY -->
-    <section id="process" class="bg-methodology py-[60px]">
-      <div class="mx-auto max-w-[1024px] px-8 text-center">
-        <h2 class="text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-methodology-text">Methodology</h2>
-        <p class="mt-4 text-base leading-6 text-methodology-muted">A structured process from research to refined experiences</p>
+    <section id="process" class="bg-methodology px-6 py-12 sm:py-[60px] lg:px-[70px]">
+      <div class="mx-auto w-full max-w-page">
+        <div class="text-center">
+          <h2 data-reveal class="text-[32px] font-semibold leading-[1.2] tracking-[-0.96px] text-methodology-text sm:text-[40px] lg:text-[48px] lg:leading-[57.6px]" data-i18n="home.methodology.title">Methodology</h2>
+          <p data-reveal class="mx-auto mt-4 max-w-[28rem] text-base leading-6 text-methodology-muted" data-i18n="home.methodology.subtitle">A structured process from research to refined experiences</p>
+        </div>
+
+      <!-- Mobile: vertical wave — icon on path, copy beside -->
+      <div class="methodology-track-mobile mt-10 lg:hidden">
+        <svg class="methodology-track-mobile__svg rtl:scale-x-[-1]" viewBox="0 0 320 720" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M64 48C64 128 256 128 256 208C256 288 64 288 64 368C64 448 256 448 256 528C256 608 64 608 64 672" stroke="#FFCEA8" stroke-width="5" stroke-dasharray="12 12" stroke-opacity="0.14"/>
+          <path d="M64 48C64 128 256 128 256 208C256 288 64 288 64 368C64 448 256 448 256 528C256 608 64 608 64 672" stroke="#FFCEA8" stroke-width="5" stroke-dasharray="12 12"/>
+        </svg>
+
+        <div class="methodology-mobile-step methodology-mobile-step--peak" style="--step-y: 6.7%">
+          <div class="methodology-mobile-node-wrap">
+            <div class="methodology-mobile-node">
+              <img src="assets/images/icons/method-research.svg" alt="" class="size-6" width="24" height="24">
+            </div>
+          </div>
+          <div class="methodology-mobile-copy">
+            <h3 data-i18n="home.methodology.step1Title">1. Research</h3>
+            <p data-i18n="home.methodology.step1Desc">Understanding users, their needs, behaviors, and pain points.</p>
+          </div>
+        </div>
+
+        <div class="methodology-mobile-step methodology-mobile-step--valley" style="--step-y: 28.9%">
+          <div class="methodology-mobile-node-wrap">
+            <div class="methodology-mobile-node">
+              <img src="assets/images/icons/method-define.svg" alt="" class="size-6" width="24" height="24">
+            </div>
+          </div>
+          <div class="methodology-mobile-copy">
+            <h3 data-i18n="home.methodology.step2Title">2. Define</h3>
+            <p data-i18n="home.methodology.step2Desc">Defining the problem, user goals, and design requirements.</p>
+          </div>
+        </div>
+
+        <div class="methodology-mobile-step methodology-mobile-step--peak" style="--step-y: 51.1%">
+          <div class="methodology-mobile-node-wrap">
+            <div class="methodology-mobile-node">
+              <img src="assets/images/icons/method-flow.svg" alt="" class="size-6" width="24" height="24">
+            </div>
+          </div>
+          <div class="methodology-mobile-copy">
+            <h3 data-i18n-html="home.methodology.step3Title">3. User Flow &amp; IA</h3>
+            <p data-i18n="home.methodology.step3Desc">Structuring information and mapping intuitive user journeys.</p>
+          </div>
+        </div>
+
+        <div class="methodology-mobile-step methodology-mobile-step--valley" style="--step-y: 73.3%">
+          <div class="methodology-mobile-node-wrap">
+            <div class="methodology-mobile-node">
+              <img src="assets/images/icons/method-wireframe.svg" alt="" class="size-6" width="24" height="24">
+            </div>
+          </div>
+          <div class="methodology-mobile-copy">
+            <h3 data-i18n="home.methodology.step4Title">4. Wireframe &amp; UI</h3>
+            <p data-i18n="home.methodology.step4Desc">Turning ideas into structured layouts and polished interfaces.</p>
+          </div>
+        </div>
+
+        <div class="methodology-mobile-step methodology-mobile-step--peak" style="--step-y: 93.3%">
+          <div class="methodology-mobile-node-wrap">
+            <div class="methodology-mobile-node">
+              <img src="assets/images/icons/method-prototype.svg" alt="" class="size-6" width="24" height="24">
+            </div>
+          </div>
+          <div class="methodology-mobile-copy">
+            <h3 data-i18n="home.methodology.step5Title">5. Prototype &amp; Test</h3>
+            <p data-i18n="home.methodology.step5Desc">Prototyping, testing with users, and refining the experience.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="relative mx-auto mt-8 h-[450px] w-full max-w-[1184px] px-12">
-        <img src="assets/images/ui/methodology-path.svg" alt="" class="pointer-events-none absolute inset-0 size-full" width="1184" height="450">
+      <!-- Desktop: horizontal wave -->
+      <div class="methodology-track relative mx-auto mt-10 hidden w-full lg:mt-8 lg:block lg:h-[450px]">
+        <svg data-methodology-svg class="pointer-events-none absolute inset-0 hidden size-full lg:block rtl:scale-x-[-1]" width="1184" height="450" viewBox="0 0 1184 450" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <mask id="methodology-draw-mask" maskUnits="userSpaceOnUse">
+              <path data-methodology-mask d="M118 126.5C236.4 126.5 235.783 340.319 354.183 340.319C472.583 340.319 473.714 110.319 592.114 110.319C710.514 110.319 706.506 340.319 824.906 340.319C943.306 340.319 946.8 126.5 1065.2 126.5" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </mask>
+          </defs>
+          <path data-methodology-ghost d="M118 126.5C236.4 126.5 235.783 340.319 354.183 340.319C472.583 340.319 473.714 110.319 592.114 110.319C710.514 110.319 706.506 340.319 824.906 340.319C943.306 340.319 946.8 126.5 1065.2 126.5" stroke="#FFCEA8" stroke-width="6" stroke-dasharray="13.66 13.66" stroke-opacity="0.14"/>
+          <path data-methodology-path d="M118 126.5C236.4 126.5 235.783 340.319 354.183 340.319C472.583 340.319 473.714 110.319 592.114 110.319C710.514 110.319 706.506 340.319 824.906 340.319C943.306 340.319 946.8 126.5 1065.2 126.5" stroke="#FFCEA8" stroke-width="6" stroke-dasharray="13.66 13.66" mask="url(#methodology-draw-mask)"/>
+        </svg>
 
         <!-- Step 1 -->
-        <div class="absolute left-[0.28%] top-[60px] w-[18%] text-center">
-          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+        <div class="methodology-step hidden lg:absolute lg:start-[0.28%] lg:top-[60px] lg:block lg:w-[18%] lg:text-center">
+          <div class="relative z-10 mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
             <img src="assets/images/icons/method-research.svg" alt="" class="size-6" width="24" height="24">
           </div>
-          <h3 class="text-xl font-bold leading-7 text-methodology-text">1. Research</h3>
-          <p class="mx-auto mt-3 max-w-[193px] text-xs leading-[19.5px] text-methodology-muted">Understanding users, their needs, behaviors, and pain points.</p>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text" data-i18n="home.methodology.step1Title">1. Research</h3>
+          <p class="mx-auto mt-3 max-w-[193px] text-xs leading-[19.5px] text-methodology-muted" data-i18n="home.methodology.step1Desc">Understanding users, their needs, behaviors, and pain points.</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="absolute left-[20.28%] top-[280px] w-[18%] text-center">
-          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+        <div class="methodology-step hidden lg:absolute lg:start-[20.28%] lg:top-[280px] lg:block lg:w-[18%] lg:text-center">
+          <div class="relative z-10 mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
             <img src="assets/images/icons/method-define.svg" alt="" class="size-6" width="24" height="24">
           </div>
-          <h3 class="text-xl font-bold leading-7 text-methodology-text">2. Define</h3>
-          <p class="mx-auto mt-3 max-w-[188px] text-xs leading-[19.5px] text-methodology-muted">Defining the problem, user goals, and design requirements.</p>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text" data-i18n="home.methodology.step2Title">2. Define</h3>
+          <p class="mx-auto mt-3 max-w-[188px] text-xs leading-[19.5px] text-methodology-muted" data-i18n="home.methodology.step2Desc">Defining the problem, user goals, and design requirements.</p>
         </div>
 
-        <!-- Step 3 -->
-        <div class="absolute left-1/2 top-[60px] w-[224px] -translate-x-1/2 text-center">
-          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+        <!-- Step 3 — physical center (wave peak); start-1/2 breaks RTL centering -->
+        <div class="methodology-step hidden lg:absolute lg:left-1/2 lg:top-[60px] lg:block lg:w-[224px] lg:-translate-x-1/2 lg:text-center rtl:lg:w-[280px]">
+          <div class="relative z-10 mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
             <img src="assets/images/icons/method-flow.svg" alt="" class="size-6" width="24" height="24">
           </div>
-          <h3 class="text-xl font-bold leading-7 text-methodology-text">3. User Flow &amp; IA</h3>
-          <p class="mx-auto mt-3 max-w-[180px] text-xs leading-[19.5px] text-methodology-muted">Structuring information and mapping intuitive user journeys.</p>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text" data-i18n-html="home.methodology.step3Title">3. User Flow &amp; IA</h3>
+          <p class="mx-auto mt-3 max-w-[180px] text-xs leading-[19.5px] text-methodology-muted" data-i18n="home.methodology.step3Desc">Structuring information and mapping intuitive user journeys.</p>
         </div>
 
         <!-- Step 4 -->
-        <div class="absolute left-[60.28%] top-[280px] w-[18%] text-center">
-          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+        <div class="methodology-step hidden lg:absolute lg:start-[60.28%] lg:top-[280px] lg:block lg:w-[18%] lg:text-center">
+          <div class="relative z-10 mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
             <img src="assets/images/icons/method-wireframe.svg" alt="" class="size-6" width="24" height="24">
           </div>
-          <h3 class="text-xl font-bold leading-7 text-methodology-text">4. Wireframe &amp; UI</h3>
-          <p class="mx-auto mt-3 max-w-[207px] text-xs leading-[19.5px] text-methodology-muted">Turning ideas into structured layouts and polished interfaces.</p>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text" data-i18n="home.methodology.step4Title">4. Wireframe &amp; UI</h3>
+          <p class="mx-auto mt-3 max-w-[207px] text-xs leading-[19.5px] text-methodology-muted" data-i18n="home.methodology.step4Desc">Turning ideas into structured layouts and polished interfaces.</p>
         </div>
 
         <!-- Step 5 -->
-        <div class="absolute right-0 top-[60px] w-[18%] text-center">
-          <div class="mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+        <div class="methodology-step hidden lg:absolute lg:start-[81.72%] lg:top-[60px] lg:block lg:w-[18%] lg:text-center">
+          <div class="relative z-10 mx-auto mb-6 flex size-20 items-center justify-center rounded-full border border-outline bg-methodology-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
             <img src="assets/images/icons/method-prototype.svg" alt="" class="size-6" width="24" height="24">
           </div>
-          <h3 class="text-xl font-bold leading-7 text-methodology-text">5. Prototype &amp; Test</h3>
-          <p class="mx-auto mt-3 max-w-[202px] text-xs leading-[19.5px] text-methodology-muted">Prototyping, testing with users, and refining the experience.</p>
+          <h3 class="text-xl font-bold leading-7 text-methodology-text" data-i18n="home.methodology.step5Title">5. Prototype &amp; Test</h3>
+          <p class="mx-auto mt-3 max-w-[202px] text-xs leading-[19.5px] text-methodology-muted" data-i18n="home.methodology.step5Desc">Prototyping, testing with users, and refining the experience.</p>
         </div>
+      </div>
       </div>
     </section>
 
     <!-- INDEX & EXPERIENCE -->
     <section class="border-y border-outline-20 bg-cream px-6 py-[61px] lg:px-[70px]">
-      <div class="mx-auto max-w-content">
-        <h2 class="mb-16 text-[48px] font-semibold leading-[57.6px] tracking-[-0.96px] text-ink">Index &amp; Experience</h2>
+      <div class="mx-auto max-w-page">
+        <h2 data-reveal class="mb-16 text-[32px] font-semibold leading-[1.2] tracking-[-0.96px] text-ink sm:text-[40px] lg:text-[48px] lg:leading-[57.6px]" data-i18n="home.experience.title">Index &amp; Experience</h2>
         <div class="flex flex-col">
-          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
-            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Webura</span></div>
-            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">UI/UX Designer</span></div>
-            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2026 — Present</span></div>
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="home.experience.weburaOrg">Webura</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="home.experience.weburaRole">UI/UX Designer</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="home.experience.weburaPeriod">2026 — Present</span></div>
           </div>
-          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
-            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Palestine University</span></div>
-            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">B.Sc. Software Engineering</span></div>
-            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2023 — 2027</span></div>
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="home.experience.universityOrg">Palestine University</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="home.experience.universityRole">B.Sc. Software Engineering</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="home.experience.universityPeriod">2023 — 2027</span></div>
           </div>
-          <div class="grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
-            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Freelance</span></div>
-            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">Product Design Consultant</span></div>
-            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2024 — Present</span></div>
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-t border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="home.experience.freelanceOrg">Freelance</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="home.experience.freelanceRole">Product Design Consultant</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="home.experience.freelancePeriod">2024 — Present</span></div>
           </div>
-          <div class="grid grid-cols-1 gap-2 border-y border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
-            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong">Gaza Sky Geeks</span></div>
-            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle">Design Mentorship</span></div>
-            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint">2025</span></div>
+          <div data-experience-row class="experience-row grid grid-cols-1 gap-2 border-y border-border-subtle px-4 py-[25px] sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-4"><span class="text-lg font-medium leading-7 text-ink-strong" data-i18n="home.experience.gsgOrg">Gaza Sky Geeks</span></div>
+            <div class="sm:col-span-5"><span class="text-lg leading-7 text-ink-subtle" data-i18n="home.experience.gsgRole">Design Mentorship</span></div>
+            <div class="sm:col-span-3 sm:text-end"><span class="text-sm leading-5 text-ink-faint" data-i18n="home.experience.gsgPeriod">2025</span></div>
           </div>
         </div>
       </div>
@@ -313,15 +428,20 @@
 
     <!-- CTA -->
     <section class="bg-surface-warm px-6 py-[60px] lg:px-[70px]">
-      <div class="relative mx-auto max-w-content overflow-hidden rounded-[24px] border border-outline-30 bg-cta-surface p-12 text-center lg:p-[97px]">
-        <div class="pointer-events-none absolute -left-12 -top-12 size-48 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
-        <div class="pointer-events-none absolute -bottom-24 -right-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
-        <h2 class="relative mx-auto max-w-[946px] text-[48px] leading-[48px] text-ink">Ready to build something structured and calm?</h2>
-        <div class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
-          <a href="contact.html" class="rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">Start a Conversation</a>
-          <a href="#work" class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2">
-            View selected work
-            <img src="assets/images/icons/cta-arrow.svg" alt="" class="size-3" width="12" height="12">
+      <div class="relative mx-auto max-w-page overflow-hidden rounded-[24px] border border-outline-30 bg-cta-surface p-8 text-center sm:p-12 lg:p-[97px]">
+        <div class="pointer-events-none absolute -start-12 -top-12 size-48 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -bottom-24 -end-24 size-64 rounded-full border border-outline opacity-50" aria-hidden="true"></div>
+        <h2 data-reveal class="relative mx-auto max-w-[946px] text-[32px] leading-[1.2] text-ink sm:text-[40px] lg:text-[48px] lg:leading-[48px]" data-i18n="home.cta.title">Ready to build something structured and calm?</h2>
+        <div data-reveal class="relative mt-8 flex flex-wrap items-center justify-center gap-6">
+          <a href="contact.html" data-btn-fill class="btn-fill rounded bg-primary px-8 py-4 text-sm font-medium tracking-[0.07em] text-cta-button-text shadow-[0px_1px_1px_rgba(0,0,0,0.05)]">
+            <span class="btn-fill__layer" aria-hidden="true"></span>
+            <span class="relative z-10" data-i18n="home.cta.button">Start a Conversation</span>
+          </a>
+          <a href="#work" class="link-arrow group inline-flex items-center gap-2 text-sm font-medium tracking-[0.07em] text-cta-link underline decoration-[rgba(215,194,191,0.5)] underline-offset-2 transition-colors duration-300 hover:text-primary hover:decoration-primary/50">
+            <span data-i18n="home.cta.link">View selected work</span>
+            <svg class="size-3 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+              <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -329,21 +449,26 @@
 
   </main>
 
-  <!-- FOOTER — Figma 72:3242 / 73:3350 -->
-  <footer class="flex flex-col items-start justify-end bg-surface-warm px-6 pt-10 lg:px-[70px]">
-    <div class="w-full max-w-content shrink-0 rounded-t-[12px] border border-b-0 border-outline-20 bg-cream px-8 pb-6 pt-[25px]">
-      <div class="flex items-center justify-between">
-        <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary">Yara Al-Haddad</span>
-        <div class="flex shrink-0 items-center gap-6">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">LinkedIn</a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted">Behance</a>
-          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted" data-lang-toggle aria-label="Switch to Arabic">العربية</button>
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-warm px-6 pt-10 lg:px-[70px]">
+    <div class="mx-auto w-full max-w-page shrink-0 rounded-t-[12px] border border-b-0 border-outline-20 bg-cream px-8 pb-6 pt-[25px]">
+      <div class="flex flex-col items-center gap-5 text-center lg:grid lg:w-full lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-6 lg:text-start">
+        <span class="shrink-0 text-[32px] font-medium leading-[41.6px] text-primary lg:justify-self-start" data-i18n="footer.brandName">Yara Al-Haddad</span>
+        <div class="flex flex-col items-center gap-3 lg:flex-row lg:justify-center lg:gap-6">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.linkedin">LinkedIn</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-i18n="footer.behance">Behance</a>
+          <button type="button" class="font-ar text-sm font-medium tracking-[0.07em] text-muted transition-colors duration-300 hover:text-primary" data-lang-toggle data-i18n="footer.langToggle" data-i18n-attr="aria-label:footer.langToggleAria" aria-label="Switch to Arabic">العربية</button>
         </div>
-        <p class="shrink-0 text-sm leading-5 text-muted-soft">© 2024 Yara Al-Haddad. All rights reserved.</p>
+        <p class="shrink-0 text-sm leading-5 text-muted-soft lg:justify-self-end lg:text-end" data-i18n="footer.copyright">© 2024 Yara Al-Haddad. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script src="assets/js/gsap-init.js"></script>
 </body>
 </html>

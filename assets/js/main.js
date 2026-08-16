@@ -248,6 +248,9 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    if (window.YaraI18n) {
+      window.YaraI18n.init();
+    }
     initMobileMenu();
     initProjectGallery();
   });
