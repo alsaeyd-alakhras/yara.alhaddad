@@ -26,115 +26,88 @@
     if (!slides.length) return;
 
     var isAnimating = false;
-    var scrollSyncTimer = null;
+    var activePageIndex = 0;
     var SCROLL_DURATION = 850;
-    var SCROLL_EPSILON = 4;
+    var SLIDE_GAP = 24;
 
-    function easeInOutCubic(t) {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    function syncViewportDir() {
+      viewport.setAttribute("dir", document.documentElement.dir || "ltr");
     }
 
-    function getMaxScroll() {
-      return Math.max(0, track.scrollWidth - viewport.clientWidth);
+    function prefersReducedMotion() {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
 
     /** How many slides fit in the viewport at once (1 mobile, 2 tablet, 3 desktop). */
     function getVisibleStep() {
       var viewWidth = viewport.clientWidth;
       var count = 0;
+      var used = 0;
 
       for (var i = 0; i < slides.length; i++) {
-        var slide = slides[i];
-        if (slide.offsetLeft + slide.offsetWidth <= viewWidth + 1) {
-          count++;
-        } else {
-          break;
-        }
+        var width = slides[i].offsetWidth;
+
+        if (count > 0) used += SLIDE_GAP;
+        if (used + width > viewWidth + 1) break;
+
+        used += width;
+        count++;
       }
 
       return Math.max(1, count);
     }
 
-    /** Page stops: jump by visible batch, last page snaps to the end. */
-    function getPagePositions() {
+    /** Slide index anchors for each gallery page (logical order: first → last). */
+    function getPageAnchors() {
       var step = getVisibleStep();
-      var maxScroll = getMaxScroll();
-      var positions = [0];
+      var anchors = [0];
 
-      if (maxScroll <= 0) return positions;
+      if (slides.length <= step) return anchors;
 
       for (var i = step; i < slides.length; i += step) {
-        var isLastBatch = i >= slides.length - step;
-
-        if (isLastBatch) {
-          if (maxScroll > positions[positions.length - 1] + SCROLL_EPSILON) {
-            positions.push(maxScroll);
+        if (i >= slides.length - step) {
+          if (anchors[anchors.length - 1] !== slides.length - 1) {
+            anchors.push(slides.length - 1);
           }
           break;
         }
 
-        positions.push(slides[i].offsetLeft);
+        anchors.push(i);
       }
 
-      var lastPosition = positions[positions.length - 1];
-      if (maxScroll > lastPosition + SCROLL_EPSILON) {
-        positions.push(maxScroll);
+      if (anchors[anchors.length - 1] !== slides.length - 1 && slides.length > step) {
+        anchors.push(slides.length - 1);
       }
 
-      return positions;
+      return anchors;
     }
 
-    function getCurrentPageIndex(positions) {
-      var scrollLeft = viewport.scrollLeft;
-      var current = 0;
-
-      for (var i = 0; i < positions.length; i++) {
-        if (positions[i] <= scrollLeft + SCROLL_EPSILON) {
-          current = i;
-        }
+    function scrollToSlide(slideIndex, inlineAlign, onComplete) {
+      var slide = slides[slideIndex];
+      if (!slide) {
+        if (onComplete) onComplete();
+        return;
       }
 
-      return current;
-    }
-
-    function smoothScrollTo(targetLeft, onComplete) {
-      if (isAnimating) return;
-
-      var startLeft = viewport.scrollLeft;
-      var distance = targetLeft - startLeft;
-
-      if (Math.abs(distance) < 1) {
+      if (prefersReducedMotion()) {
+        slide.scrollIntoView({ behavior: "auto", inline: inlineAlign, block: "nearest" });
         if (onComplete) onComplete();
         return;
       }
 
       isAnimating = true;
-      var startTime = null;
+      slide.scrollIntoView({ behavior: "smooth", inline: inlineAlign, block: "nearest" });
 
-      function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-
-        var elapsed = timestamp - startTime;
-        var progress = Math.min(elapsed / SCROLL_DURATION, 1);
-        viewport.scrollLeft = startLeft + distance * easeInOutCubic(progress);
-
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          viewport.scrollLeft = targetLeft;
-          isAnimating = false;
-          if (onComplete) onComplete();
-        }
-      }
-
-      requestAnimationFrame(step);
+      window.setTimeout(function () {
+        isAnimating = false;
+        if (onComplete) onComplete();
+      }, SCROLL_DURATION);
     }
 
     function updateButtons() {
-      var positions = getPagePositions();
-      var pageIndex = getCurrentPageIndex(positions);
-      var atStart = pageIndex <= 0;
-      var atEnd = pageIndex >= positions.length - 1;
+      var anchors = getPageAnchors();
+      var atStart = activePageIndex <= 0;
+      var atEnd = activePageIndex >= anchors.length - 1;
 
       prev.disabled = atStart;
       next.disabled = atEnd;
@@ -143,47 +116,51 @@
     }
 
     function goToPage(pageIndex) {
-      var positions = getPagePositions();
-      var targetIndex = Math.max(0, Math.min(positions.length - 1, pageIndex));
-      var targetLeft = positions[targetIndex];
+      if (isAnimating) return;
 
-      smoothScrollTo(targetLeft, updateButtons);
+      var anchors = getPageAnchors();
+      var targetIndex = Math.max(0, Math.min(anchors.length - 1, pageIndex));
+      activePageIndex = targetIndex;
+
+      var slideIndex = anchors[targetIndex];
+      var isLastPage =
+        targetIndex === anchors.length - 1 && slideIndex === slides.length - 1;
+
+      scrollToSlide(slideIndex, isLastPage ? "end" : "start", function () {
+        activePageIndex = targetIndex;
+        updateButtons();
+      });
       updateButtons();
     }
 
     function goNext() {
       if (isAnimating) return;
 
-      var positions = getPagePositions();
-      var pageIndex = getCurrentPageIndex(positions);
+      var anchors = getPageAnchors();
 
-      if (pageIndex >= positions.length - 1) return;
-      goToPage(pageIndex + 1);
+      if (activePageIndex >= anchors.length - 1) return;
+      goToPage(activePageIndex + 1);
     }
 
     function goPrev() {
       if (isAnimating) return;
 
-      var positions = getPagePositions();
-      var pageIndex = getCurrentPageIndex(positions);
+      if (activePageIndex <= 0) return;
+      goToPage(activePageIndex - 1);
+    }
 
-      if (pageIndex <= 0) return;
-      goToPage(pageIndex - 1);
+    function scrollToStart() {
+      activePageIndex = 0;
+      scrollToSlide(0, "start", updateButtons);
+      updateButtons();
     }
 
     function clampToNearestPage() {
       if (isAnimating) return;
-
-      var positions = getPagePositions();
-      var pageIndex = getCurrentPageIndex(positions);
-      var targetLeft = positions[pageIndex];
-
-      if (Math.abs(viewport.scrollLeft - targetLeft) > SCROLL_EPSILON) {
-        viewport.scrollLeft = targetLeft;
-      }
-
-      updateButtons();
+      goToPage(activePageIndex);
     }
+
+    syncViewportDir();
 
     slides.forEach(function (slide) {
       var img = slide.querySelector("img");
@@ -225,23 +202,17 @@
     prev.addEventListener("click", goPrev);
     next.addEventListener("click", goNext);
 
-    viewport.addEventListener(
-      "scroll",
-      function () {
-        if (isAnimating) return;
-
-        clearTimeout(scrollSyncTimer);
-        scrollSyncTimer = setTimeout(updateButtons, 120);
-      },
-      { passive: true }
-    );
-
     window.addEventListener("resize", function () {
       if (!isAnimating) {
         clampToNearestPage();
       } else {
         updateButtons();
       }
+    });
+
+    document.documentElement.addEventListener("yara:langchange", function () {
+      syncViewportDir();
+      scrollToStart();
     });
 
     updateButtons();

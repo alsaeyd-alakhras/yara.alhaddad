@@ -8,9 +8,21 @@
       "title": "Work — Yara Al-Haddad",
       "description": "Selected projects by Yara Al-Haddad — mobile products, responsive platforms, dashboards, and focused UI explorations."
     },
-    "project": {
-      "title": "Sadded — Case Study | Yara Al-Haddad",
-      "description": "Sadded debt management mobile app — a research-led UX case study by Yara Al-Haddad."
+    "project-trackly": {
+      "title": "Trackly — Case Study | Yara Al-Haddad",
+      "description": "Trackly smart finance management platform — a multi-platform fintech product case study by Yara Al-Haddad."
+    },
+    "project-sprout": {
+      "title": "Sprout — Case Study | Yara Al-Haddad",
+      "description": "Sprout community garden management mobile app — a UX case study by Yara Al-Haddad."
+    },
+    "project-edu-dashboard": {
+      "title": "Educational Dashboard — Case Study | Yara Al-Haddad",
+      "description": "Educational Dashboard school management web app — a responsive dashboard case study by Yara Al-Haddad."
+    },
+    "project-mywfp": {
+      "title": "MyWFP — Case Study | Yara Al-Haddad",
+      "description": "MyWFP self-registration mobile app for WFP beneficiaries — a UX case study by Yara Al-Haddad."
     },
     "about": {
       "title": "About — Yara Al-Haddad",
@@ -42,6 +54,12 @@
   },
   "shared": {
     "tagMobileApp": "Mobile App",
+    "tagWebApp": "Web App",
+    "tagUiUxDesign": "UI/UX Design",
+    "tagFintech": "Fintech Project",
+    "tagDashboardDesign": "Dashboard Design",
+    "tagCommunityPlatform": "Community Platform",
+    "tagCaseStudy": "Case Study",
     "tagUxCaseStudy": "UX Case Study",
     "readCaseStudy": "Read Case Study",
     "viewProject": "View Project",
@@ -77,12 +95,12 @@
     },
     "work": {
       "title": "Selected Work",
-      "saddedTitle": "Sadded",
-      "saddedQuote": "\"How might we make personal debt easier to understand and manage?\"",
-      "admineduTitle": "AdminEdu",
-      "admineduDesc": "Responsive education dashboard supporting comprehensive light and dark themes.",
-      "worknestTitle": "WorkNest",
-      "worknestDesc": "Responsive HR onboarding system designed for clarity and ease of use across all devices.",
+      "tracklyTitle": "Trackly",
+      "tracklyDesc": "A multi-platform financial product for tracking expenses, managing budgets, monitoring bills, and gaining smarter insights.",
+      "sproutTitle": "Sprout",
+      "sproutDesc": "A mobile platform for organizing gardens, volunteers, plots, and harvest activities.",
+      "mywfpTitle": "MyWFP",
+      "mywfpDesc": "A mobile experience designed to simplify beneficiary registration, profile updates, and access to assistance services.",
       "viewAll": "View all projects"
     },
     "methodology": {
@@ -135,28 +153,26 @@
       "tagUxResearch": "UX Research",
       "tagProductDesign": "Product Design",
       "tagMobileApp": "Mobile App",
-      "tagResponsiveWeb": "Responsive Web",
-      "tagMobile": "Mobile",
-      "tagUiUx": "UI/UX",
-      "tagDashboard": "Dashboard",
-      "tagResponsiveUi": "Responsive UI",
+      "tagWebApp": "Web App",
+      "tagUiUxDesign": "UI/UX Design",
+      "tagFintech": "Fintech Project",
+      "tagUiDesign": "UI Design",
+      "tagDashboardDesign": "Dashboard Design",
+      "tagCommunityPlatform": "Community Platform",
+      "tagCaseStudy": "Case Study",
       "tagDarkLight": "Dark & Light",
-      "tagCommunity": "Community",
-      "saddedTitle": "<span class=\"block\">Sadded, Debt Management</span><span class=\"block\">Mobile App</span>",
-      "saddedDesc": "A research-led mobile experience for understanding and managing personal debt.",
-      "worknestTitle": "WorkNest",
-      "worknestSubtitle": "HR Systems Onboarding",
-      "worknestDesc": "Responsive onboarding concepts designed to make the first steps into an HR platform feel clear and approachable.",
-      "admineduTitle": "AdminEdu",
-      "admineduSubtitle": "Responsive Education Dashboard",
-      "admineduDesc": "A dark and light administrative dashboard organizing attendance, assignments, schedules, and student information across desktop and mobile.",
+      "tracklyTitle": "Trackly",
+      "tracklySubtitle": "Smart Finance Management Platform",
+      "tracklyDesc": "A multi-platform financial product for tracking expenses, managing budgets, monitoring bills, and gaining smarter insights.",
       "sproutTitle": "Sprout",
-      "sproutSubtitle": "Community Garden Platform",
-      "sproutDesc": "Mobile and web interfaces for joining community gardens, managing roles, and supporting administrative workflows.",
-      "financeTitle": "Personal Finance",
-      "financeSubtitle": "Bill Splitting Assistant",
-      "financeDesc": "A collaborative concept for organizing personal finances and splitting shared bills.",
-      "comingSoon": "Project visual coming soon"
+      "sproutSubtitle": "Community Garden Management Mobile App",
+      "sproutDesc": "A mobile platform for organizing gardens, volunteers, plots, and harvest activities.",
+      "eduDashboardTitle": "Educational Dashboard",
+      "eduDashboardSubtitle": "School Management Web App",
+      "eduDashboardDesc": "A responsive dashboard concept for managing students, attendance, assignments, grades, and academic activity.",
+      "mywfpTitle": "MyWFP",
+      "mywfpSubtitle": "Self-Registration Mobile App",
+      "mywfpDesc": "A mobile experience designed to simplify beneficiary registration, profile updates, and access to assistance services."
     },
     "cta": {
       "title": "Have a product that needs clearer structure and a more human interface?",
@@ -164,41 +180,115 @@
       "email": "yara.ast3@gmail.com"
     }
   },
-  "project": {
+  "projectPage": {
     "backLink": "All work",
-    "header": {
-      "title": "Sadded",
-      "subtitle": "Debt Management Mobile App",
-      "description": "A mobile product concept for recording debts and following payment activity."
+    "detailsTitle": "Project Details",
+    "galleryTitle": "Project Gallery",
+    "prevAria": "Previous gallery image",
+    "nextAria": "Next gallery image",
+    "figmaLink": "View source in Figma",
+    "ctaTitle": "Ready to build something structured and calm?",
+    "ctaButton": "Start a Conversation",
+    "ctaLink": "View selected work"
+  },
+  "projects": {
+    "trackly": {
+      "header": {
+        "title": "Trackly",
+        "subtitle": "Smart Finance Management Platform",
+        "description": "A multi-platform financial product for tracking expenses, managing budgets, monitoring bills, and gaining smarter insights."
+      },
+      "tags": {
+        "webApp": "Web App",
+        "mobileApp": "Mobile App",
+        "uiUxDesign": "UI/UX Design",
+        "fintech": "Fintech Project"
+      },
+      "coverAlt": "Trackly smart finance management platform mockups",
+      "details": {
+        "body": "Managing personal finances can quickly become complicated when expenses, bills, debts, budgets, and reminders are spread across different tools. Users often struggle to maintain a clear overview of their financial activity and make informed decisions about their spending. The goal was to create a unified platform that makes financial management simpler, more organized, and easier to understand. We focused on a clean and intuitive experience across web, dashboard, and mobile, combining visual financial insights, expense tracking, budget management, reminders, and smart AI-supported features to help users stay informed, reduce financial stress, and maintain better control over their money."
+      },
+      "gallery": {
+        "alt01": "Trackly dashboard interface screens",
+        "alt02": "Trackly mobile app expense tracking screens",
+        "alt03": "Trackly budget and insights screens",
+        "alt04": "Trackly product overview with feature highlights"
+      },
+      "nextProject": "Next project — Sprout"
     },
-    "tags": {
-      "mobileApp": "Mobile App",
-      "uxResearch": "UX Research",
-      "uiDesign": "UI Design",
-      "hackathon": "Hackathon Project"
+    "sprout": {
+      "header": {
+        "title": "Sprout",
+        "subtitle": "Community Garden Management Mobile App",
+        "description": "A mobile platform for organizing gardens, volunteers, plots, and harvest activities."
+      },
+      "tags": {
+        "mobileApp": "Mobile App",
+        "uxCaseStudy": "UX Case Study",
+        "uiDesign": "UI Design",
+        "communityPlatform": "Community Platform"
+      },
+      "coverAlt": "Sprout community garden management mobile app mockups",
+      "details": {
+        "body": "Managing community gardens can become difficult when information is scattered across manual records and separate files. Teams often struggle to coordinate volunteers, monitor garden plots, track planting schedules, and record harvest activities efficiently. The goal of this project was to design a simple and user-friendly mobile application that brings all of these tasks into one centralized system. By focusing on clarity, accessibility, and structured information flow, the experience helps administrators, garden managers, and volunteers work more smoothly together. The result is a clean digital solution that supports better coordination, accurate record-keeping, and a more organized community gardening experience."
+      },
+      "gallery": {
+        "alt01": "Sprout mobile app home and garden screens",
+        "alt02": "Sprout volunteer and plot management screens",
+        "alt03": "Sprout harvest tracking and activity screens",
+        "alt04": "Sprout community garden platform overview"
+      },
+      "nextProject": "Next project — Educational Dashboard"
     },
-    "coverAlt": "Sadded mobile app mockups",
-    "details": {
-      "title": "Project Details",
-      "body": "Managing personal debt can be overwhelming and stressful. Users often struggle to keep track of multiple creditors, payment deadlines, and the overall progress of their repayment journey. The goal was to create a tool that simplifies this process while maintaining a sense of calm and control. We focused on a clean, minimalist interface that prioritizes clarity. By using a soft color palette and structured data visualization, we transformed complex financial information into an intuitive experience that encourages regular engagement and financial mindfulness."
+    "eduDashboard": {
+      "header": {
+        "title": "Educational Dashboard",
+        "subtitle": "School Management Web App",
+        "description": "A responsive dashboard concept for managing students, attendance, assignments, grades, and academic activity."
+      },
+      "tags": {
+        "webApp": "Web App",
+        "uxResearch": "UX Research",
+        "uiDesign": "UI Design",
+        "dashboardDesign": "Dashboard Design"
+      },
+      "coverAlt": "Educational Dashboard school management web app mockups",
+      "details": {
+        "body": "Managing daily academic activities can become complicated when student data, attendance, assignments, grades, and communication are spread across different tools. The goal was to create a centralized dashboard that simplifies these tasks while giving teachers and administrators a clear view of student performance and classroom activity. We focused on a clean, structured interface that prioritizes usability and quick access to important information. By combining simple navigation, organized data visualization, responsive layouts, and both light and dark modes, we created an intuitive experience that supports smoother academic management across desktop and mobile."
+      },
+      "gallery": {
+        "alt01": "Educational Dashboard wireframes and information structure",
+        "alt02": "Educational Dashboard project details and feature overview",
+        "alt03": "Educational Dashboard light mode interface",
+        "alt04": "Educational Dashboard dark mode interface"
+      },
+      "nextProject": "Next project — MyWFP"
     },
-    "gallery": {
-      "title": "Project Gallery",
-      "prevAria": "Previous gallery image",
-      "nextAria": "Next gallery image",
-      "altResearch": "UX Research Insights board",
-      "altFlow": "User Flow and Architecture diagram",
-      "altDesignSystem": "Sadded design system",
-      "altMockups": "Sadded app mockups showcase",
-      "altDashboard": "Sadded mobile dashboard interface",
-      "altCover": "Sadded mobile app cover",
-      "figmaLink": "View source in Figma",
-      "nextProject": "Next project — WorkNest"
-    },
-    "cta": {
-      "title": "Ready to build something structured and calm?",
-      "button": "Start a Conversation",
-      "link": "View selected work"
+    "mywfp": {
+      "header": {
+        "title": "MyWFP",
+        "subtitle": "Self-Registration Mobile App",
+        "description": "A mobile experience designed to simplify beneficiary registration, profile updates, and access to assistance services."
+      },
+      "tags": {
+        "mobileApp": "Mobile App",
+        "uxResearch": "UX Research",
+        "uiDesign": "UI Design",
+        "caseStudy": "Case Study"
+      },
+      "coverAlt": "MyWFP self-registration mobile app mockups",
+      "details": {
+        "body": "MyWFP is a mobile self-registration experience designed for WFP beneficiaries. The project focuses on simplifying registration and profile updates while making the process clearer, safer, and easier to complete. The experience uses step-by-step registration, secure identity verification, real-time validation, auto-save, and offline support to reduce errors and prevent data loss during unstable connectivity. It also provides a clearer way to manage family information, update personal details, and review information before submission. The goal was to create a simple and accessible mobile experience that supports both new and existing beneficiaries while maintaining clarity, security, and ease of use."
+      },
+      "gallery": {
+        "alt01": "MyWFP registration welcome and onboarding screens",
+        "alt02": "MyWFP identity verification flow screens",
+        "alt03": "MyWFP profile and family information screens",
+        "alt04": "MyWFP registration step overview",
+        "alt05": "MyWFP form validation and review screens",
+        "alt06": "MyWFP offline support and submission screens"
+      },
+      "nextProject": "Next project — Trackly"
     }
   },
   "about": {

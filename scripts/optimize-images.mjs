@@ -20,6 +20,15 @@ function getOptions(relativePath) {
     return { quality: 82, effort: 6, maxWidth: 836 };
   }
 
+  if (relativePath.startsWith("projects/")) {
+    const isCover = /\/cover\.[^/]+$/.test(relativePath);
+    return {
+      quality: isCover ? 88 : 85,
+      effort: isCover ? 6 : 4,
+      maxWidth: isCover ? 2400 : 1920,
+    };
+  }
+
   return { quality: 85, effort: 4, maxWidth: null };
 }
 

@@ -122,8 +122,21 @@
     });
   }
 
+  function getAssetBase() {
+    var scripts = document.getElementsByTagName("script");
+
+    for (var i = scripts.length - 1; i >= 0; i--) {
+      var src = scripts[i].getAttribute("src");
+      if (src && src.indexOf("assets/js/i18n.js") !== -1) {
+        return src.replace(/assets\/js\/i18n\.js(?:\?.*)?$/, "");
+      }
+    }
+
+    return "./";
+  }
+
   function fetchDict(lang) {
-    return fetch("./assets/data/i18n/" + lang + ".json")
+    return fetch(getAssetBase() + "assets/data/i18n/" + lang + ".json")
       .then(function (res) {
         if (!res.ok) throw new Error("Failed to load translations");
         return res.json();
@@ -146,6 +159,9 @@
       applyDocumentLang(lang);
       applyTranslations();
       wireToggleButtons();
+      document.documentElement.dispatchEvent(
+        new CustomEvent("yara:langchange", { detail: { lang: lang } })
+      );
       return lang;
     });
   }

@@ -95,7 +95,7 @@
       gsap.set('[data-accent]', { opacity: 0, y: 24 })
     }
 
-    var heroImage = document.querySelector('.hero-image')
+    var heroImage = document.querySelector('[data-hero] .hero-image')
     if (heroImage) gsap.set(heroImage, { scale: 0.92 })
 
     if (page === 'home' || page === 'about') {
@@ -714,7 +714,6 @@
         break
       case 'project':
         initHeroTimeline()
-        initSoftParallax()
         initBatchReveal()
         break
       case 'about':
