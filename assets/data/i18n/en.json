@@ -400,5 +400,10 @@
       "optionOther": "Other",
       "submit": "Send inquiry"
     }
+  },
+  "whatsapp": {
+    "label": "Contact via WhatsApp",
+    "aria": "Contact via WhatsApp",
+    "message": "Hello, I came across your portfolio and would like to get in touch."
   }
 }

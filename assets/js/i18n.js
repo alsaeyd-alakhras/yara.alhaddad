@@ -7,7 +7,7 @@
 
   var currentLang = DEFAULT_LANG;
   var dict = null;
-  var initialized = false;
+  var initPromise = null;
 
   function getStoredLang() {
     try {
@@ -95,8 +95,25 @@
       });
     });
 
+    applyWhatsAppLinks();
     applyMeta();
     updateToggleButtons();
+  }
+
+  function buildWhatsAppHref(phone, message) {
+    var base = "https://wa.me/" + phone;
+    if (!message) return base;
+    return base + "?text=" + encodeURIComponent(message);
+  }
+
+  function applyWhatsAppLinks() {
+    var message = lookup("whatsapp.message");
+
+    document.querySelectorAll("[data-whatsapp-link]").forEach(function (el) {
+      var phone = el.getAttribute("data-whatsapp-phone");
+      if (!phone) return;
+      el.setAttribute("href", buildWhatsAppHref(phone, message));
+    });
   }
 
   function updateToggleButtons() {
@@ -171,17 +188,13 @@
   }
 
   function init() {
-    if (initialized) {
-      applyTranslations();
-      return Promise.resolve(currentLang);
-    }
+    if (initPromise) return initPromise;
 
-    initialized = true;
     currentLang = getStoredLang();
     applyDocumentLang(currentLang);
     wireToggleButtons();
-
-    return setLang(currentLang);
+    initPromise = setLang(currentLang);
+    return initPromise;
   }
 
   window.YaraI18n = {
@@ -190,6 +203,7 @@
     toggle: toggle,
     t: t,
     init: init,
+    applyTranslations: applyTranslations,
   };
 
   document.addEventListener("DOMContentLoaded", function () {
