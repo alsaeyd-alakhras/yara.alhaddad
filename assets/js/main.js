@@ -89,19 +89,29 @@
         return;
       }
 
-      if (prefersReducedMotion()) {
-        slide.scrollIntoView({ behavior: "auto", inline: inlineAlign, block: "nearest" });
-        if (onComplete) onComplete();
-        return;
+      var viewRect = viewport.getBoundingClientRect();
+      var slideRect = slide.getBoundingClientRect();
+      var delta =
+        inlineAlign === "end"
+          ? slideRect.right - viewRect.right
+          : slideRect.left - viewRect.left;
+      var targetScroll = viewport.scrollLeft + delta;
+      var behavior = prefersReducedMotion() ? "auto" : "smooth";
+
+      if (behavior === "smooth") {
+        isAnimating = true;
       }
 
-      isAnimating = true;
-      slide.scrollIntoView({ behavior: "smooth", inline: inlineAlign, block: "nearest" });
+      viewport.scrollTo({ left: targetScroll, behavior: behavior });
 
-      window.setTimeout(function () {
-        isAnimating = false;
+      if (behavior === "auto") {
         if (onComplete) onComplete();
-      }, SCROLL_DURATION);
+      } else {
+        window.setTimeout(function () {
+          isAnimating = false;
+          if (onComplete) onComplete();
+        }, SCROLL_DURATION);
+      }
     }
 
     function updateButtons() {
@@ -218,6 +228,196 @@
     updateButtons();
   }
 
+  function initGalleryLightbox() {
+    var root = document.querySelector("[data-project-gallery]");
+    if (!root) return;
+
+    var track = root.querySelector("[data-gallery-track]");
+    if (!track) return;
+
+    var slides = track.querySelectorAll("[data-gallery-slide]");
+    if (!slides.length) return;
+
+    var lightbox = null;
+    var activeIndex = 0;
+    var lastFocus = null;
+    var closeTimer = null;
+
+    function translate(key, fallback) {
+      if (window.YaraI18n && window.YaraI18n.t) {
+        var value = window.YaraI18n.t(key);
+        return value !== key ? value : fallback;
+      }
+      return fallback;
+    }
+
+    function ensureLightbox() {
+      if (lightbox) return lightbox;
+
+      var prevIcon = root.querySelector("[data-gallery-prev] img");
+      var nextIcon = root.querySelector("[data-gallery-next] img");
+      var prevSrc = prevIcon ? prevIcon.getAttribute("src") : "";
+      var nextSrc = nextIcon ? nextIcon.getAttribute("src") : "";
+
+      var el = document.createElement("div");
+      el.className = "gallery-lightbox";
+      el.setAttribute("data-gallery-lightbox", "");
+      el.setAttribute("role", "dialog");
+      el.setAttribute("aria-modal", "true");
+      el.hidden = true;
+      el.innerHTML =
+        '<button type="button" class="gallery-lightbox__backdrop" data-lightbox-backdrop aria-label="Close image view"></button>' +
+        '<button type="button" class="gallery-lightbox__close" data-lightbox-close aria-label="Close image view">' +
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>' +
+        '<button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev" data-lightbox-prev aria-label="Previous image">' +
+        '<img src="' +
+        prevSrc +
+        '" alt="" class="gallery-lightbox__nav-icon gallery-nav-icon" width="24" height="24"></button>' +
+        '<button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" data-lightbox-next aria-label="Next image">' +
+        '<img src="' +
+        nextSrc +
+        '" alt="" class="gallery-lightbox__nav-icon gallery-nav-icon" width="24" height="24"></button>' +
+        '<figure class="gallery-lightbox__stage">' +
+        '<img src="" alt="" class="gallery-lightbox__image" data-lightbox-image></figure>';
+
+      document.body.appendChild(el);
+      lightbox = el;
+
+      el.querySelector("[data-lightbox-backdrop]").addEventListener("click", closeLightbox);
+      el.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
+      el.querySelector("[data-lightbox-prev]").addEventListener("click", function (event) {
+        event.stopPropagation();
+        goTo(activeIndex - 1);
+      });
+      el.querySelector("[data-lightbox-next]").addEventListener("click", function (event) {
+        event.stopPropagation();
+        goTo(activeIndex + 1);
+      });
+      el.querySelector(".gallery-lightbox__stage").addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      return el;
+    }
+
+    function updateLightbox() {
+      var lb = ensureLightbox();
+      var slideImg = slides[activeIndex].querySelector("img");
+      var lbImg = lb.querySelector("[data-lightbox-image]");
+      var prevBtn = lb.querySelector("[data-lightbox-prev]");
+      var nextBtn = lb.querySelector("[data-lightbox-next]");
+      var closeBtn = lb.querySelector("[data-lightbox-close]");
+
+      lbImg.src = slideImg.getAttribute("src");
+      lbImg.alt = slideImg.getAttribute("alt") || "";
+      lb.setAttribute(
+        "aria-label",
+        slideImg.getAttribute("alt") || translate("projectPage.galleryTitle", "Project Gallery")
+      );
+
+      prevBtn.disabled = activeIndex <= 0;
+      nextBtn.disabled = activeIndex >= slides.length - 1;
+      var closeLabel = translate("projectPage.lightboxCloseAria", "Close image view");
+      closeBtn.setAttribute("aria-label", closeLabel);
+      lb.querySelector("[data-lightbox-backdrop]").setAttribute("aria-label", closeLabel);
+      prevBtn.setAttribute(
+        "aria-label",
+        translate("projectPage.lightboxPrevAria", "Previous image")
+      );
+      nextBtn.setAttribute(
+        "aria-label",
+        translate("projectPage.lightboxNextAria", "Next image")
+      );
+    }
+
+    function prefersReducedMotion() {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+
+    function openLightbox(index) {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+
+      activeIndex = index;
+      lastFocus = document.activeElement;
+      var lb = ensureLightbox();
+      updateLightbox();
+      lb.hidden = false;
+      document.documentElement.setAttribute("data-lightbox-open", "");
+      document.body.style.overflow = "hidden";
+      window.requestAnimationFrame(function () {
+        lb.classList.add("is-open");
+      });
+      lb.querySelector("[data-lightbox-close]").focus();
+    }
+
+    function closeLightbox() {
+      if (!lightbox || lightbox.hidden) return;
+
+      lightbox.classList.remove("is-open");
+      document.documentElement.removeAttribute("data-lightbox-open");
+      document.body.style.overflow = "";
+
+      if (closeTimer) window.clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(
+        function () {
+          closeTimer = null;
+          if (lightbox && !lightbox.classList.contains("is-open")) {
+            lightbox.hidden = true;
+          }
+        },
+        prefersReducedMotion() ? 0 : 280
+      );
+
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    }
+
+    function goTo(index) {
+      if (index < 0 || index >= slides.length) return;
+      activeIndex = index;
+      updateLightbox();
+    }
+
+    function onKeydown(event) {
+      if (!lightbox || lightbox.hidden || !lightbox.classList.contains("is-open")) return;
+
+      if (event.key === "Escape") {
+        closeLightbox();
+        return;
+      }
+
+      var rtl = document.documentElement.dir === "rtl";
+
+      if (event.key === "ArrowLeft") {
+        goTo(activeIndex + (rtl ? 1 : -1));
+      } else if (event.key === "ArrowRight") {
+        goTo(activeIndex + (rtl ? -1 : 1));
+      }
+    }
+
+    slides.forEach(function (slide, index) {
+      slide.addEventListener("click", function () {
+        openLightbox(index);
+      });
+      slide.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(index);
+        }
+      });
+    });
+
+    document.addEventListener("keydown", onKeydown);
+
+    document.documentElement.addEventListener("yara:langchange", function () {
+      if (lightbox && !lightbox.hidden) updateLightbox();
+    });
+  }
+
   function initWhatsAppFloat() {
     if (document.querySelector("[data-whatsapp-float]")) return;
 
@@ -255,5 +455,6 @@
 
     initMobileMenu();
     initProjectGallery();
+    initGalleryLightbox();
   });
 })();

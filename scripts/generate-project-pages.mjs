@@ -13,10 +13,10 @@ const PROJECTS = [
     slug: "trackly",
     key: "trackly",
     gallery: [
-      [1, 1920, 1440],
-      [2, 1920, 1440],
-      [3, 1920, 1440],
-      [4, 1536, 1024],
+      { file: 4, w: 1536, h: 1024, kind: "explain" },
+      { file: 1, w: 1920, h: 1440, kind: "screen" },
+      { file: 2, w: 1920, h: 1440, kind: "screen" },
+      { file: 3, w: 1920, h: 1440, kind: "screen" },
     ],
     cover: [1672, 941],
     tags: ["webApp", "mobileApp", "uiUxDesign", "fintech"],
@@ -30,10 +30,10 @@ const PROJECTS = [
     slug: "sprout",
     key: "sprout",
     gallery: [
-      [1, 1920, 1440],
-      [2, 1920, 1440],
-      [3, 1920, 1440],
-      [4, 1672, 941],
+      { file: 4, w: 1672, h: 941, kind: "explain" },
+      { file: 1, w: 1920, h: 1440, kind: "screen" },
+      { file: 2, w: 1920, h: 1440, kind: "screen" },
+      { file: 3, w: 1920, h: 1440, kind: "screen" },
     ],
     cover: [1672, 941],
     tags: ["mobileApp", "uxCaseStudy", "uiDesign", "communityPlatform"],
@@ -47,10 +47,10 @@ const PROJECTS = [
     slug: "edu-dashboard",
     key: "eduDashboard",
     gallery: [
-      [1, 1672, 941],
-      [2, 1672, 941],
-      [3, 1672, 941],
-      [4, 1672, 941],
+      { file: 1, w: 1672, h: 941, kind: "explain" },
+      { file: 2, w: 1672, h: 941, kind: "explain" },
+      { file: 3, w: 1672, h: 941, kind: "screen" },
+      { file: 4, w: 1672, h: 941, kind: "screen" },
     ],
     cover: [1672, 941],
     tags: ["webApp", "uxResearch", "uiDesign", "dashboardDesign"],
@@ -64,12 +64,12 @@ const PROJECTS = [
     slug: "mywfp",
     key: "mywfp",
     gallery: [
-      [1, 1672, 941],
-      [2, 1672, 941],
-      [3, 1672, 941],
-      [4, 1920, 1080],
-      [5, 1920, 1080],
-      [6, 1920, 1080],
+      { file: 4, w: 1920, h: 1080, kind: "explain" },
+      { file: 1, w: 1672, h: 941, kind: "screen" },
+      { file: 2, w: 1672, h: 941, kind: "screen" },
+      { file: 3, w: 1672, h: 941, kind: "screen" },
+      { file: 5, w: 1920, h: 1080, kind: "screen" },
+      { file: 6, w: 1920, h: 1080, kind: "screen" },
     ],
     cover: [1672, 941],
     tags: ["mobileApp", "uxResearch", "uiDesign", "caseStudy"],
@@ -79,12 +79,20 @@ const PROJECTS = [
   },
 ];
 
+function sortGallery(items) {
+  const explain = items.filter((item) => item.kind === "explain");
+  const screen = items.filter((item) => item.kind === "screen");
+  return [...explain, ...screen];
+}
+
 function gallerySlides(project) {
-  return project.gallery
-    .map(([num, w, h]) => {
-      const pad = String(num).padStart(2, "0");
-      return `              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-orientation="landscape">
-                <img src="../assets/images/projects/${project.slug}/gallery-${pad}.webp" alt="" class="size-full rounded-[12px] object-cover shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="${w}" height="${h}" data-i18n-attr="alt:projects.${project.key}.gallery.alt${pad}">
+  return sortGallery(project.gallery)
+    .map(({ file, w, h, kind }) => {
+      const pad = String(file).padStart(2, "0");
+      const imgFit =
+        kind === "explain" ? "object-contain bg-case-cover" : "object-cover";
+      return `              <figure class="h-[300px] w-[calc(100%-3rem)] shrink-0 cursor-pointer snap-start sm:w-[calc(50%-0.75rem)] lg:w-[calc((100%-3rem)/3)]" data-gallery-slide data-gallery-kind="${kind}" data-orientation="landscape" tabindex="0" role="button">
+                <img src="../assets/images/projects/${project.slug}/gallery-${pad}.webp" alt="" class="size-full rounded-[12px] ${imgFit} shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" width="${w}" height="${h}" data-i18n-attr="alt:projects.${project.key}.gallery.alt${pad}">
               </figure>`;
     })
     .join("\n");
@@ -127,8 +135,8 @@ function render(project) {
 
   <header class="sticky top-0 z-50 bg-cream px-6 pt-4 lg:px-[70px]">
     <div class="relative mx-auto max-w-page pb-4">
-      <div class="grid grid-cols-[1fr_auto] items-center gap-4 rounded-[12px] border border-outline-30 bg-nav-bg px-[25px] py-[17px] shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] lg:grid-cols-[1fr_auto_1fr]">
-        <a href="../index.html" class="justify-self-start text-[32px] leading-[41.6px] tracking-[-0.025em] text-primary" data-i18n="nav.brandName">Yara Al-Haddad</a>
+      <div class="grid grid-cols-[1fr_auto] items-center gap-3 rounded-[12px] border border-outline-30 bg-nav-bg px-4 py-3.5 shadow-[0_1px_2px_0px_var(--color-nav-shadow)] backdrop-blur-[6px] sm:gap-4 sm:px-[25px] sm:py-[17px] lg:grid-cols-[1fr_auto_1fr]">
+        <a href="../index.html" class="nav-brand" data-i18n="nav.brandName">Yara Al-Haddad</a>
 
         <nav class="col-span-2 hidden items-center justify-center gap-8 lg:col-span-1 lg:flex" aria-label="Primary">
           <a href="../index.html" class="px-3 py-1.5 text-sm font-medium tracking-[0.07em] text-muted" data-i18n="nav.home">Home</a>
