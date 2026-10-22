@@ -31,6 +31,14 @@
     "contact": {
       "title": "Contact — Yara Al-Haddad",
       "description": "Get in touch with Yara Al-Haddad for UI/UX opportunities, product collaborations, and thoughtful digital work."
+    },
+    "project-medical-academy": {
+      "title": "Medical Academy — Case Study | Yara Al-Haddad",
+      "description": "Medical Academy, an Arabic medical e-learning platform — a UX case study by Yara Al-Haddad."
+    },
+    "project-queueless": {
+      "title": "QueueLess — Case Study | Yara Al-Haddad",
+      "description": "QueueLess, a smart queue management system for essential services — a UX case study by Yara Al-Haddad."
     }
   },
   "nav": {
@@ -78,9 +86,9 @@
       "ctaContact": "Start a conversation",
       "quote": "Designer, analyst, and software engineering.",
       "location": "Gaza · Available for remote opportunities",
-      "yearsValue": "2+",
+      "yearsValue": "3+",
       "yearsLabel": "YEARS EXP",
-      "projectsValue": "32",
+      "projectsValue": "20+",
       "projectsLabel": "PROJECTS",
       "chip": "Component",
       "profileAlt": "Yara Al-Haddad"
@@ -172,7 +180,17 @@
       "eduDashboardDesc": "A responsive dashboard concept for managing students, attendance, assignments, grades, and academic activity.",
       "mywfpTitle": "MyWFP",
       "mywfpSubtitle": "Self-Registration Mobile App",
-      "mywfpDesc": "A mobile experience designed to simplify beneficiary registration, profile updates, and access to assistance services."
+      "mywfpDesc": "A mobile experience designed to simplify beneficiary registration, profile updates, and access to assistance services.",
+      "tagWebPlatform": "Web Platform",
+      "tagUxCaseStudy": "UX Case Study",
+      "tagEdTech": "EdTech",
+      "tagPublicService": "Public Service",
+      "medicalAcademyTitle": "Medical Academy",
+      "medicalAcademySubtitle": "Arabic Medical Learning Platform",
+      "medicalAcademyDesc": "An Arabic e-learning platform that helps medical students and doctors study, practice, and prepare for exams in one place.",
+      "queuelessTitle": "QueueLess",
+      "queuelessSubtitle": "Smart Queue Management System for Essential Services",
+      "queuelessDesc": "A mobile and web platform that lets residents join service queues remotely and helps staff manage them with clarity."
     },
     "cta": {
       "title": "Have a product that needs clearer structure and a more human interface?",
@@ -290,6 +308,59 @@
         "alt04": "MyWFP registration step overview",
         "alt05": "MyWFP form validation and review screens",
         "alt06": "MyWFP offline support and submission screens"
+      },
+      "nextProject": "Next project — Medical Academy"
+    },
+    "medicalAcademy": {
+      "header": {
+        "title": "Medical Academy",
+        "subtitle": "Arabic Medical Learning Platform",
+        "description": "An Arabic e-learning platform that helps medical students and doctors study, practice, and prepare for exams in one place."
+      },
+      "tags": {
+        "webPlatform": "Web Platform",
+        "mobileResponsive": "Mobile Responsive",
+        "uxCaseStudy": "UX Case Study",
+        "uiDesign": "UI Design",
+        "edTech": "EdTech"
+      },
+      "coverAlt": "Medical Academy Arabic medical learning platform mockups",
+      "details": {
+        "body": "Medical students and doctors in the Arab world often rely on English-only resources scattered across books, channels, and question banks, with no clear study path to follow. Many also study alone, without guidance, community, or realistic exam practice. The goal of this project was to design a clear, Arabic-first learning platform that brings video lectures, study files, question banks, and progress tracking into one structured experience. By focusing on a simple course journey, a fast checkout, and a mobile-first layout, the platform helps students move from watching to practicing to testing with confidence. The design also includes protected content, verified certificates with unique serial numbers, course ratings, and a dedicated dashboard for instructors. The result is a trustworthy digital academy that supports better learning, stronger exam preparation, and a connected student community."
+      },
+      "gallery": {
+        "alt01": "Medical Academy UX case study boards covering vision, users, and solution",
+        "alt02": "Medical Academy landing and sign-in screens",
+        "alt03": "Medical Academy dashboard, course, and exam screens",
+        "alt04": "Medical Academy platform screens in an isometric layout",
+        "alt05": "Medical Academy mobile responsive screens"
+      },
+      "nextProject": "Next project — QueueLess"
+    },
+    "queueless": {
+      "header": {
+        "title": "QueueLess",
+        "subtitle": "Smart Queue Management System for Essential Services",
+        "description": "A mobile and web platform that lets residents join service queues remotely and helps staff manage them with clarity."
+      },
+      "tags": {
+        "mobileApp": "Mobile App",
+        "webApp": "Web App",
+        "uxCaseStudy": "UX Case Study",
+        "uiDesign": "UI Design",
+        "publicService": "Public Service"
+      },
+      "coverAlt": "QueueLess smart queue management system mockups",
+      "details": {
+        "body": "Access to essential services in Gaza, such as bakeries, hospitals, pharmacies, aid centers, and banks, often depends on standing in long, unmanaged queues for hours with no idea how long the wait will be. This puts the heaviest burden on the elderly, people with disabilities, and pregnant women, while service providers have no visibility into demand. The goal of this project was to design a clear, accessible system that moves the line from the street to the phone. Residents compare branches, get a digital ticket remotely, track their position live, and receive an alert as their turn approaches. Staff manage the queue from a simple mobile dashboard, and administrators oversee all branches through a web console. The result is a calm, predictable experience across three role-based interfaces that reduces physical waiting and supports fairer access to essential services."
+      },
+      "gallery": {
+        "alt01": "QueueLess problem statement and project objectives board",
+        "alt02": "QueueLess UX process and role-based experiences board",
+        "alt03": "QueueLess resident mobile app onboarding and home screens",
+        "alt04": "QueueLess administrator web console dashboard screens",
+        "alt05": "QueueLess resident mobile app tickets and profile screens",
+        "alt06": "QueueLess mobile and web interfaces overview"
       },
       "nextProject": "Next project — Trackly"
     }

@@ -75,6 +75,41 @@ const PROJECTS = [
     tags: ["mobileApp", "uxResearch", "uiDesign", "caseStudy"],
     figma:
       "https://www.figma.com/design/4qkLUh1atQm72EGXo0qhSk/%D8%A7%D9%84%D8%BA%D8%B0%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A?node-id=0-1&t=elWxY4J8Iz13kdcz-1",
+    nextHref: "medical-academy.html",
+  },
+  {
+    file: "medical-academy.html",
+    i18nPage: "project-medical-academy",
+    slug: "medical-academy",
+    key: "medicalAcademy",
+    gallery: [
+      { file: 1, w: 1672, h: 941, kind: "explain" },
+      { file: 2, w: 1920, h: 1080, kind: "screen" },
+      { file: 3, w: 1920, h: 1080, kind: "screen" },
+      { file: 4, w: 1920, h: 1080, kind: "screen" },
+      { file: 5, w: 1920, h: 1080, kind: "screen" },
+    ],
+    cover: [2400, 1350],
+    tags: ["webPlatform", "mobileResponsive", "uxCaseStudy", "uiDesign", "edTech"],
+    figma: "",
+    nextHref: "queueless.html",
+  },
+  {
+    file: "queueless.html",
+    i18nPage: "project-queueless",
+    slug: "queueless",
+    key: "queueless",
+    gallery: [
+      { file: 1, w: 1920, h: 1080, kind: "explain" },
+      { file: 2, w: 1920, h: 1080, kind: "explain" },
+      { file: 3, w: 1920, h: 1080, kind: "screen" },
+      { file: 4, w: 1920, h: 1080, kind: "screen" },
+      { file: 5, w: 1920, h: 1080, kind: "screen" },
+      { file: 6, w: 1920, h: 1080, kind: "screen" },
+    ],
+    cover: [2400, 1350],
+    tags: ["mobileApp", "webApp", "uxCaseStudy", "uiDesign", "publicService"],
+    figma: "",
     nextHref: "trackly.html",
   },
 ];
@@ -105,6 +140,16 @@ function tagSpans(project) {
         `            <span class="rounded-[12px] bg-icon-box px-4 py-2 text-[12px] font-semibold uppercase leading-3 tracking-[1.2px] text-meta-label" data-i18n="projects.${project.key}.tags.${tag}">${tag}</span>`
     )
     .join("\n");
+}
+
+function figmaLink(project) {
+  if (!project.figma) return "";
+  return `          <a href="${project.figma}" target="_blank" rel="noopener noreferrer" class="link-arrow inline-flex items-center gap-2 text-base leading-6 text-accent-dark transition-colors duration-300 hover:text-primary">
+            <span data-i18n="projectPage.figmaLink">View source in Figma</span>
+            <svg class="size-[10.5px] shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
+              <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
+            </svg>
+          </a>`;
 }
 
 function render(project) {
@@ -236,13 +281,8 @@ ${gallerySlides(project)}
         </div>
 
         <div class="mt-12 flex flex-col gap-6 border-t border-case-tag-border pt-[49px] sm:flex-row sm:items-center sm:justify-between">
-          <a href="${project.figma}" target="_blank" rel="noopener noreferrer" class="link-arrow inline-flex items-center gap-2 text-base leading-6 text-accent-dark transition-colors duration-300 hover:text-primary">
-            <span data-i18n="projectPage.figmaLink">View source in Figma</span>
-            <svg class="size-[10.5px] shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
-              <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
-            </svg>
-          </a>
-          <a href="${project.nextHref}" class="link-arrow inline-flex items-center gap-2 text-2xl font-medium leading-[33.6px] text-ink-strong transition-colors duration-300 hover:text-accent-dark">
+${figmaLink(project)}
+          <a href="${project.nextHref}" class="link-arrow${project.figma ? "" : " sm:ms-auto"} inline-flex items-center gap-2 text-2xl font-medium leading-[33.6px] text-ink-strong transition-colors duration-300 hover:text-accent-dark">
             <span data-i18n="projects.${project.key}.nextProject">Next project</span>
             <svg class="size-4 shrink-0 rtl:-scale-x-100" viewBox="0 0 9.33333 9.33333" fill="none" aria-hidden="true">
               <path d="M7.10208 5.25H0V4.08333H7.10208L3.83542 0.816667L4.66667 0L9.33333 4.66667L4.66667 9.33333L3.83542 8.51667L7.10208 5.25V5.25" fill="currentColor"/>
